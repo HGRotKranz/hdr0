@@ -662,6 +662,111 @@ class TerminalMod(loader.Module):
             )
         )
 
+    @staticmethod
+    def _ssh_option_consumes_argument(option: str) -> bool:
+        return option in {
+            "B",
+            "b",
+            "c",
+            "D",
+            "E",
+            "e",
+            "F",
+            "I",
+            "i",
+            "J",
+            "L",
+            "l",
+            "m",
+            "O",
+            "o",
+            "p",
+            "Q",
+            "R",
+            "S",
+            "W",
+            "w",
+        }
+
+    @classmethod
+    def _ssh_destination_index(
+        cls,
+        argv: typing.List[str],
+    ) -> typing.Tuple[typing.Optional[int], bool, bool]:
+        has_tty_option = False
+        skip_autocd = False
+        index = 1
+
+        while index < len(argv):
+            token = argv[index]
+
+            if token == "--":
+                return (
+                    (index + 1 if index + 1 < len(argv) else None),
+                    has_tty_option,
+                    skip_autocd,
+                )
+
+            if not token.startswith("-") or token == "-":
+                return index, has_tty_option, skip_autocd
+
+            if token in {"-t", "-tt", "-T"}:
+                has_tty_option = True
+                skip_autocd = skip_autocd or token == "-T"
+                index += 1
+                continue
+
+            if token.startswith("--"):
+                index += 1
+                continue
+
+            offset = 1
+            while offset < len(token):
+                option = token[offset]
+                if option in {"N", "T", "f", "s"}:
+                    skip_autocd = True
+
+                if cls._ssh_option_consumes_argument(option):
+                    if option in {"O", "W", "w"}:
+                        skip_autocd = True
+                    if offset == len(token) - 1:
+                        index += 1
+                    break
+
+                offset += 1
+
+            index += 1
+
+        return None, has_tty_option, skip_autocd
+
+    @classmethod
+    def _prepare_ssh_autocd(cls, cmd: str, cwd: str) -> str:
+        try:
+            argv = shlex.split(cmd)
+        except ValueError:
+            return cmd
+
+        if not argv or os.path.basename(argv[0]) != "ssh":
+            return cmd
+
+        destination_index, has_tty_option, skip_autocd = cls._ssh_destination_index(
+            argv
+        )
+        if (
+            destination_index is None
+            or skip_autocd
+            or destination_index + 1 < len(argv)
+        ):
+            return cmd
+
+        remote_command = f"cd {shlex.quote(cwd)} && exec ${{SHELL:-/bin/sh}} -l"
+        prepared = list(argv)
+        if not has_tty_option:
+            prepared.insert(destination_index, "-t")
+
+        prepared.append(remote_command)
+        return shlex.join(prepared)
+
     def _read_tracked_cwd(self, cwd_file: str) -> typing.Optional[str]:
         try:
             with open(cwd_file, encoding="utf-8") as file:
@@ -1306,6 +1411,7 @@ class TerminalMod(loader.Module):
     ):
         cmd = self._append_sudo_stdin_switch(cmd)
         cwd = self._get_cwd()
+        cmd = self._prepare_ssh_autocd(cmd, cwd)
         cwd_file = os.path.join(
             tempfile.gettempdir(),
             f"hikka-terminal-{uuid.uuid4().hex}.cwd",

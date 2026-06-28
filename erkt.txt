@@ -1,0 +1,2919 @@
+
+
+    ~/hikka/hdr0    main ▓▒░────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────░▒▓ hdr0  
+
+❯ >....                                                                                                                                                                   
+
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+
+  File "<frozen importlib._bootstrap>", line 1335, in _find_and_load_unlocked
+
+ModuleNotFoundError: No module named 'hikkatl'
+
+
+
+During handling of the above exception, another exception occurred:
+
+
+
+Traceback (most recent call last):
+
+  File "<frozen runpy>", line 203, in _run_module_as_main
+
+  File "<frozen runpy>", line 88, in _run_code
+
+  File "/home/stani/hikka/hdr0/hikka/__main__.py", line 125, in <module>
+
+    deps()
+
+    ~~~~^^
+
+  File "/home/stani/hikka/hdr0/hikka/__main__.py", line 90, in deps
+
+    subprocess.run(
+
+    ~~~~~~~~~~~~~~^
+
+        [
+
+        ^
+
+    ...<11 lines>...
+
+        check=True,
+
+        ^^^^^^^^^^^
+
+    )
+
+    ^
+
+  File "/usr/lib64/python3.14/subprocess.py", line 578, in run
+
+    raise CalledProcessError(retcode, process.args,
+
+                             output=stdout, stderr=stderr)
+
+subprocess.CalledProcessError: Command '['/home/stani/hikka/hdr0/.venv/bin/python3', '-m', 'pip', 'install', '--upgrade', '-q', '--disable-pip-version-check', '--no-warn-script-location', '-r', '/home/stani/hikka/hdr0/requirements.txt']' returned non-zero exit status 1.
+
+  <b1>  ~/hikka/hdr0 <b1>   main ▓▒░────────────────────────────────────────────────────────────────────────────────────────────────────────────────────░▒▓ 31s  <b3> hdr0 
+
+❯
+
+
+
+zsh: parse error near `)'
+
+❯ # Знаходячись у папці проекту:
+
+deactivate
+
+rm -rf .venv
+
+
+
+# Створюємо середовище знову:
+
+python3 -m venv .venv
+
+source .venv/bin/activate
+
+
+
+# Оновлюємо pip (це важливо для сучасних білдів):
+
+pip install --upgrade pip
+
+
+
+# Встановлюємо залежності:
+
+pip install -r requirements.txt
+
+Requirement already satisfied: pip in ./.venv/lib64/python3.14/site-packages (26.0.1)
+
+Collecting pip
+
+  Using cached pip-26.1.2-py3-none-any.whl.metadata (4.6 kB)
+
+Using cached pip-26.1.2-py3-none-any.whl (1.8 MB)
+
+Installing collected packages: pip
+
+  Attempting uninstall: pip
+
+    Found existing installation: pip 26.0.1
+
+    Uninstalling pip-26.0.1:
+
+      Successfully uninstalled pip-26.0.1
+
+Successfully installed pip-26.1.2
+
+Collecting hikka-tl-new>=2.0.8 (from -r requirements.txt (line 1))
+
+  Using cached Hikka_TL_New-2.0.8-py3-none-any.whl.metadata (3.3 kB)
+
+Collecting hikka-pyro-new>=2.0.103 (from -r requirements.txt (line 2))
+
+  Using cached Hikka_Pyro_New-2.0.103-py3-none-any.whl.metadata (4.6 kB)
+
+Collecting pyrogram==2.0.106 (from -r requirements.txt (line 3))
+
+  Using cached Pyrogram-2.0.106-py3-none-any.whl.metadata (4.4 kB)
+
+Collecting aiofile==3.11.1 (from -r requirements.txt (line 4))
+
+  Using cached aiofile-3.11.1-py3-none-any.whl.metadata (14 kB)
+
+Collecting gitpython==3.1.50 (from -r requirements.txt (line 5))
+
+  Using cached gitpython-3.1.50-py3-none-any.whl.metadata (14 kB)
+
+Collecting meval==2.5 (from -r requirements.txt (line 6))
+
+  Using cached meval-2.5-py3-none-any.whl.metadata (645 bytes)
+
+Collecting aiohttp_jinja2==1.5.1 (from -r requirements.txt (line 7))
+
+  Using cached aiohttp_jinja2-1.5.1-py3-none-any.whl.metadata (8.1 kB)
+
+Collecting aiohttp==3.8.6 (from -r requirements.txt (line 8))
+
+  Using cached aiohttp-3.8.6.tar.gz (7.4 MB)
+
+  Installing build dependencies ... done
+
+  Getting requirements to build wheel ... done
+
+  Preparing metadata (pyproject.toml) ... done
+
+Collecting Jinja2==3.1.6 (from -r requirements.txt (line 9))
+
+  Using cached jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+
+Collecting requests==2.34.2 (from -r requirements.txt (line 10))
+
+  Using cached requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+
+Collecting aiogram==2.25.2 (from -r requirements.txt (line 11))
+
+  Using cached aiogram-2.25.2-py3-none-any.whl.metadata (3.9 kB)
+
+Collecting grapheme==0.6.0 (from -r requirements.txt (line 12))
+
+  Using cached grapheme-0.6.0-py3-none-any.whl
+
+Collecting emoji==2.15.0 (from -r requirements.txt (line 13))
+
+  Using cached emoji-2.15.0-py3-none-any.whl.metadata (5.7 kB)
+
+Collecting werkzeug==3.1.8 (from -r requirements.txt (line 14))
+
+  Using cached werkzeug-3.1.8-py3-none-any.whl.metadata (4.0 kB)
+
+Collecting psutil==7.2.2 (from -r requirements.txt (line 15))
+
+  Using cached psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl.metadata (22 kB)
+
+Collecting tgcrypto==1.2.5 (from -r requirements.txt (line 16))
+
+  Using cached TgCrypto-1.2.5.tar.gz (37 kB)
+
+  Installing build dependencies ... done
+
+  Getting requirements to build wheel ... done
+
+  Preparing metadata (pyproject.toml) ... done
+
+Collecting rsa==4.9.1 (from -r requirements.txt (line 17))
+
+  Using cached rsa-4.9.1-py3-none-any.whl.metadata (5.6 kB)
+
+Collecting ruamel.yaml==0.19.1 (from -r requirements.txt (line 18))
+
+  Using cached ruamel_yaml-0.19.1-py3-none-any.whl.metadata (16 kB)
+
+Collecting pyaes==1.6.1 (from pyrogram==2.0.106->-r requirements.txt (line 3))
+
+  Using cached pyaes-1.6.1-py3-none-any.whl
+
+Collecting pysocks==1.7.1 (from pyrogram==2.0.106->-r requirements.txt (line 3))
+
+  Using cached PySocks-1.7.1-py3-none-any.whl.metadata (13 kB)
+
+Collecting caio~=0.9.0 (from aiofile==3.11.1->-r requirements.txt (line 4))
+
+  Using cached caio-0.9.25-cp314-cp314-manylinux_2_34_x86_64.whl.metadata (3.3 kB)
+
+Collecting gitdb<5,>=4.0.1 (from gitpython==3.1.50->-r requirements.txt (line 5))
+
+  Using cached gitdb-4.0.12-py3-none-any.whl.metadata (1.2 kB)
+
+Collecting attrs>=17.3.0 (from aiohttp==3.8.6->-r requirements.txt (line 8))
+
+  Using cached attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+
+Collecting charset-normalizer<4.0,>=2.0 (from aiohttp==3.8.6->-r requirements.txt (line 8))
+
+  Using cached charset_normalizer-3.4.7-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (40 kB)
+
+Collecting multidict<7.0,>=4.5 (from aiohttp==3.8.6->-r requirements.txt (line 8))
+
+  Using cached multidict-6.7.1-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (5.3 kB)
+
+Collecting async_timeout<5.0,>=4.0.0a3 (from aiohttp==3.8.6->-r requirements.txt (line 8))
+
+  Using cached async_timeout-4.0.3-py3-none-any.whl.metadata (4.2 kB)
+
+Collecting yarl<2.0,>=1.0 (from aiohttp==3.8.6->-r requirements.txt (line 8))
+
+  Using cached yarl-1.24.2-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (94 kB)
+
+Collecting frozenlist>=1.1.1 (from aiohttp==3.8.6->-r requirements.txt (line 8))
+
+  Using cached frozenlist-1.8.0-cp314-cp314-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (20 kB)
+
+Collecting aiosignal>=1.1.2 (from aiohttp==3.8.6->-r requirements.txt (line 8))
+
+  Using cached aiosignal-1.4.0-py3-none-any.whl.metadata (3.7 kB)
+
+Collecting MarkupSafe>=2.0 (from Jinja2==3.1.6->-r requirements.txt (line 9))
+
+  Using cached markupsafe-3.0.3-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+
+Collecting idna<4,>=2.5 (from requests==2.34.2->-r requirements.txt (line 10))
+
+  Using cached idna-3.18-py3-none-any.whl.metadata (6.1 kB)
+
+Collecting urllib3<3,>=1.26 (from requests==2.34.2->-r requirements.txt (line 10))
+
+  Using cached urllib3-2.7.0-py3-none-any.whl.metadata (6.9 kB)
+
+Collecting certifi>=2023.5.7 (from requests==2.34.2->-r requirements.txt (line 10))
+
+  Using cached certifi-2026.6.17-py3-none-any.whl.metadata (2.5 kB)
+
+Collecting Babel<2.10.0,>=2.9.1 (from aiogram==2.25.2->-r requirements.txt (line 11))
+
+  Using cached Babel-2.9.1-py2.py3-none-any.whl.metadata (1.2 kB)
+
+Collecting magic-filter>=1.0.9 (from aiogram==2.25.2->-r requirements.txt (line 11))
+
+  Using cached magic_filter-1.0.12-py3-none-any.whl.metadata (1.5 kB)
+
+Collecting pyasn1>=0.1.3 (from rsa==4.9.1->-r requirements.txt (line 17))
+
+  Using cached pyasn1-0.6.3-py3-none-any.whl.metadata (8.4 kB)
+
+Collecting pytz>=2015.7 (from Babel<2.10.0,>=2.9.1->aiogram==2.25.2->-r requirements.txt (line 11))
+
+  Using cached pytz-2026.2-py2.py3-none-any.whl.metadata (22 kB)
+
+Collecting smmap<6,>=3.0.1 (from gitdb<5,>=4.0.1->gitpython==3.1.50->-r requirements.txt (line 5))
+
+  Using cached smmap-5.0.3-py3-none-any.whl.metadata (4.6 kB)
+
+Collecting propcache>=0.2.1 (from yarl<2.0,>=1.0->aiohttp==3.8.6->-r requirements.txt (line 8))
+
+  Using cached propcache-0.5.2-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (16 kB)
+
+Using cached Pyrogram-2.0.106-py3-none-any.whl (3.6 MB)
+
+Using cached aiofile-3.11.1-py3-none-any.whl (20 kB)
+
+Using cached gitpython-3.1.50-py3-none-any.whl (212 kB)
+
+Using cached meval-2.5-py3-none-any.whl (3.6 kB)
+
+Using cached aiohttp_jinja2-1.5.1-py3-none-any.whl (11 kB)
+
+Using cached jinja2-3.1.6-py3-none-any.whl (134 kB)
+
+Using cached requests-2.34.2-py3-none-any.whl (73 kB)
+
+Using cached aiogram-2.25.2-py3-none-any.whl (203 kB)
+
+Using cached emoji-2.15.0-py3-none-any.whl (608 kB)
+
+Using cached werkzeug-3.1.8-py3-none-any.whl (226 kB)
+
+Using cached psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (155 kB)
+
+Using cached rsa-4.9.1-py3-none-any.whl (34 kB)
+
+Using cached ruamel_yaml-0.19.1-py3-none-any.whl (118 kB)
+
+Using cached PySocks-1.7.1-py3-none-any.whl (16 kB)
+
+Using cached async_timeout-4.0.3-py3-none-any.whl (5.7 kB)
+
+Using cached Babel-2.9.1-py2.py3-none-any.whl (8.8 MB)
+
+Using cached caio-0.9.25-cp314-cp314-manylinux_2_34_x86_64.whl (80 kB)
+
+Using cached charset_normalizer-3.4.7-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (215 kB)
+
+Using cached gitdb-4.0.12-py3-none-any.whl (62 kB)
+
+Using cached idna-3.18-py3-none-any.whl (65 kB)
+
+Using cached multidict-6.7.1-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (248 kB)
+
+Using cached smmap-5.0.3-py3-none-any.whl (24 kB)
+
+Using cached urllib3-2.7.0-py3-none-any.whl (131 kB)
+
+Using cached yarl-1.24.2-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (107 kB)
+
+Using cached Hikka_TL_New-2.0.8-py3-none-any.whl (646 kB)
+
+Using cached Hikka_Pyro_New-2.0.103-py3-none-any.whl (3.6 MB)
+
+Using cached aiosignal-1.4.0-py3-none-any.whl (7.5 kB)
+
+Using cached attrs-26.1.0-py3-none-any.whl (67 kB)
+
+Using cached certifi-2026.6.17-py3-none-any.whl (133 kB)
+
+Using cached frozenlist-1.8.0-cp314-cp314-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (231 kB)
+
+Using cached magic_filter-1.0.12-py3-none-any.whl (11 kB)
+
+Using cached markupsafe-3.0.3-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (23 kB)
+
+Using cached propcache-0.5.2-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (61 kB)
+
+Using cached pyasn1-0.6.3-py3-none-any.whl (83 kB)
+
+Using cached pytz-2026.2-py2.py3-none-any.whl (510 kB)
+
+Building wheels for collected packages: aiohttp, tgcrypto
+
+  Building wheel for aiohttp (pyproject.toml) ... error
+
+  error: subprocess-exited-with-error
+
+  
+
+  × Building wheel for aiohttp (pyproject.toml) did not run successfully.
+
+  │ exit code: 1
+
+  ╰─> [201 lines of output]
+
+      *********************
+
+      * Accelerated build *
+
+      *********************
+
+      /tmp/pip-build-env-i85hai0a/overlay/lib/python3.14/site-packages/setuptools/dist.py:765: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+
+      !!
+
+      
+
+              ********************************************************************************
+
+              Please consider removing the following classifiers in favor of a SPDX license expression:
+
+      
+
+              License :: OSI Approved :: Apache Software License
+
+      
+
+              See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+
+              ********************************************************************************
+
+      
+
+      !!
+
+        self._finalize_license_expression()
+
+      running bdist_wheel
+
+      running build
+
+      running build_py
+
+      creating build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/worker.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/web_ws.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/web_urldispatcher.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/web_server.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/web_runner.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/web_routedef.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/web_response.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/web_request.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/web_protocol.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/web_middlewares.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/web_log.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/web_fileresponse.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/web_exceptions.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/web_app.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/web.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/typedefs.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/tracing.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/test_utils.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/tcp_helpers.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/streams.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/resolver.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/pytest_plugin.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/payload_streamer.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/payload.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/multipart.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/log.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/locks.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/http_writer.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/http_websocket.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/http_parser.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/http_exceptions.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/http.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/helpers.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/hdrs.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/formdata.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/cookiejar.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/connector.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/client_ws.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/client_reqrep.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/client_proto.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/client_exceptions.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/client.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/base_protocol.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/abc.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/__init__.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      running egg_info
+
+      writing aiohttp.egg-info/PKG-INFO
+
+      writing dependency_links to aiohttp.egg-info/dependency_links.txt
+
+      writing requirements to aiohttp.egg-info/requires.txt
+
+      writing top-level names to aiohttp.egg-info/top_level.txt
+
+      reading manifest file 'aiohttp.egg-info/SOURCES.txt'
+
+      reading manifest template 'MANIFEST.in'
+
+      warning: no files found matching 'aiohttp' anywhere in distribution
+
+      warning: no previously-included files matching '*.pyc' found anywhere in distribution
+
+      warning: no previously-included files matching '*.pyd' found anywhere in distribution
+
+      warning: no previously-included files matching '*.so' found anywhere in distribution
+
+      warning: no previously-included files matching '*.lib' found anywhere in distribution
+
+      warning: no previously-included files matching '*.dll' found anywhere in distribution
+
+      warning: no previously-included files matching '*.a' found anywhere in distribution
+
+      warning: no previously-included files matching '*.obj' found anywhere in distribution
+
+      warning: no previously-included files found matching 'aiohttp/*.html'
+
+      no previously-included directories found matching 'docs/_build'
+
+      adding license file 'LICENSE.txt'
+
+      writing manifest file 'aiohttp.egg-info/SOURCES.txt'
+
+      copying aiohttp/_cparser.pxd -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/_find_header.pxd -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/_headers.pxi -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/_helpers.pyi -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/_helpers.pyx -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/_http_parser.pyx -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/_http_writer.pyx -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/_websocket.pyx -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/py.typed -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      creating build/lib.linux-x86_64-cpython-314/aiohttp/.hash
+
+      copying aiohttp/.hash/_cparser.pxd.hash -> build/lib.linux-x86_64-cpython-314/aiohttp/.hash
+
+      copying aiohttp/.hash/_find_header.pxd.hash -> build/lib.linux-x86_64-cpython-314/aiohttp/.hash
+
+      copying aiohttp/.hash/_helpers.pyi.hash -> build/lib.linux-x86_64-cpython-314/aiohttp/.hash
+
+      copying aiohttp/.hash/_helpers.pyx.hash -> build/lib.linux-x86_64-cpython-314/aiohttp/.hash
+
+      copying aiohttp/.hash/_http_parser.pyx.hash -> build/lib.linux-x86_64-cpython-314/aiohttp/.hash
+
+      copying aiohttp/.hash/_http_writer.pyx.hash -> build/lib.linux-x86_64-cpython-314/aiohttp/.hash
+
+      copying aiohttp/.hash/_websocket.pyx.hash -> build/lib.linux-x86_64-cpython-314/aiohttp/.hash
+
+      copying aiohttp/.hash/hdrs.py.hash -> build/lib.linux-x86_64-cpython-314/aiohttp/.hash
+
+      running build_ext
+
+      building 'aiohttp._websocket' extension
+
+      creating build/temp.linux-x86_64-cpython-314/aiohttp
+
+      gcc -fno-strict-overflow -Wsign-compare -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DNDEBUG -fcf-protection -fexceptions -fcf-protection -fexceptions -fcf-protection -fexceptions -O3 -fPIC -I/home/stani/hikka/hdr0/.venv/include -I/usr/include/python3.14 -c aiohttp/_websocket.c -o build/temp.linux-x86_64-cpython-314/aiohttp/_websocket.o
+
+      aiohttp/_websocket.c:826:1: warning: «Py_UNICODE» застарілий [-Wdeprecated-declarations]
+
+        826 | static CYTHON_INLINE size_t __Pyx_Py_UNICODE_strlen(const Py_UNICODE *u) {
+
+            | ^~~~~~
+
+      aiohttp/_websocket.c: У функції «__Pyx_Py_UNICODE_strlen»:
+
+      aiohttp/_websocket.c:827:5: warning: «Py_UNICODE» застарілий [-Wdeprecated-declarations]
+
+        827 |     const Py_UNICODE *u_end = u;
+
+            |     ^~~~~
+
+      aiohttp/_websocket.c: У функції «__pyx_pf_7aiohttp_10_websocket__websocket_mask_cython»:
+
+      aiohttp/_websocket.c:1475:3: warning: «Py_OptimizeFlag» застарілий [-Wdeprecated-declarations]
+
+       1475 |   if (unlikely(!Py_OptimizeFlag)) {
+
+            |   ^~
+
+      In file included from /usr/include/python3.14/Python.h:87,
+
+                       from aiohttp/_websocket.c:6:
+
+      /usr/include/python3.14/cpython/pydebug.h:13:37: note: оголошено тут
+
+         13 | Py_DEPRECATED(3.12) PyAPI_DATA(int) Py_OptimizeFlag;
+
+            |                                     ^~~~~~~~~~~~~~~
+
+      aiohttp/_websocket.c: У функції «__Pyx_get_tp_dict_version»:
+
+      aiohttp/_websocket.c:1118:63: error: «PyDictObject» не має члена з іменем «ma_version_tag»
+
+       1118 | #define __PYX_GET_DICT_VERSION(dict)  (((PyDictObject*)(dict))->ma_version_tag)
+
+            |                                                               ^~
+
+      aiohttp/_websocket.c:2680:27: note: in expansion of macro «__PYX_GET_DICT_VERSION»
+
+       2680 |     return likely(dict) ? __PYX_GET_DICT_VERSION(dict) : 0;
+
+            |                           ^~~~~~~~~~~~~~~~~~~~~~
+
+      aiohttp/_websocket.c: У функції «__Pyx_get_object_dict_version»:
+
+      aiohttp/_websocket.c:1118:63: error: «PyDictObject» не має члена з іменем «ma_version_tag»
+
+       1118 | #define __PYX_GET_DICT_VERSION(dict)  (((PyDictObject*)(dict))->ma_version_tag)
+
+            |                                                               ^~
+
+      aiohttp/_websocket.c:2692:36: note: in expansion of macro «__PYX_GET_DICT_VERSION»
+
+       2692 |     return (dictptr && *dictptr) ? __PYX_GET_DICT_VERSION(*dictptr) : 0;
+
+            |                                    ^~~~~~~~~~~~~~~~~~~~~~
+
+      aiohttp/_websocket.c: У функції «__Pyx_object_dict_version_matches»:
+
+      aiohttp/_websocket.c:1118:63: error: «PyDictObject» не має члена з іменем «ma_version_tag»
+
+       1118 | #define __PYX_GET_DICT_VERSION(dict)  (((PyDictObject*)(dict))->ma_version_tag)
+
+            |                                                               ^~
+
+      aiohttp/_websocket.c:936:43: note: in definition of macro «unlikely»
+
+        936 |   #define unlikely(x) __builtin_expect(!!(x), 0)
+
+            |                                           ^
+
+      aiohttp/_websocket.c:2696:56: note: in expansion of macro «__PYX_GET_DICT_VERSION»
+
+       2696 |     if (unlikely(!dict) || unlikely(tp_dict_version != __PYX_GET_DICT_VERSION(dict)))
+
+            |                                                        ^~~~~~~~~~~~~~~~~~~~~~
+
+      aiohttp/_websocket.c: У функції «__Pyx_CLineForTraceback»:
+
+      aiohttp/_websocket.c:1118:63: error: «PyDictObject» не має члена з іменем «ma_version_tag»
+
+       1118 | #define __PYX_GET_DICT_VERSION(dict)  (((PyDictObject*)(dict))->ma_version_tag)
+
+            |                                                               ^~
+
+      aiohttp/_websocket.c:935:43: note: in definition of macro «likely»
+
+        935 |   #define likely(x)   __builtin_expect(!!(x), 1)
+
+            |                                           ^
+
+      aiohttp/_websocket.c:1125:16: note: in expansion of macro «__PYX_GET_DICT_VERSION»
+
+       1125 |     if (likely(__PYX_GET_DICT_VERSION(DICT) == __pyx_dict_version)) {\
+
+            |                ^~~~~~~~~~~~~~~~~~~~~~
+
+      aiohttp/_websocket.c:2741:9: note: in expansion of macro «__PYX_PY_DICT_LOOKUP_IF_MODIFIED»
+
+       2741 |         __PYX_PY_DICT_LOOKUP_IF_MODIFIED(
+
+            |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+      aiohttp/_websocket.c:1118:63: error: «PyDictObject» не має члена з іменем «ma_version_tag»
+
+       1118 | #define __PYX_GET_DICT_VERSION(dict)  (((PyDictObject*)(dict))->ma_version_tag)
+
+            |                                                               ^~
+
+      aiohttp/_websocket.c:1129:30: note: in expansion of macro «__PYX_GET_DICT_VERSION»
+
+       1129 |         __pyx_dict_version = __PYX_GET_DICT_VERSION(DICT);\
+
+            |                              ^~~~~~~~~~~~~~~~~~~~~~
+
+      aiohttp/_websocket.c:2741:9: note: in expansion of macro «__PYX_PY_DICT_LOOKUP_IF_MODIFIED»
+
+       2741 |         __PYX_PY_DICT_LOOKUP_IF_MODIFIED(
+
+            |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+      aiohttp/_websocket.c: У функції «__Pyx_PyInt_As_long»:
+
+      aiohttp/_websocket.c:3042:53: error: «PyLongObject» {також відомий як «struct _longobject»} не має члена з іменем «ob_digit»
+
+       3042 |             const digit* digits = ((PyLongObject*)x)->ob_digit;
+
+            |                                                     ^~
+
+      aiohttp/_websocket.c:3097:53: error: «PyLongObject» {також відомий як «struct _longobject»} не має члена з іменем «ob_digit»
+
+       3097 |             const digit* digits = ((PyLongObject*)x)->ob_digit;
+
+            |                                                     ^~
+
+      aiohttp/_websocket.c:3183:27: error: too few arguments to function «_PyLong_AsByteArray»; expected 6, have 5
+
+       3183 |                 int ret = _PyLong_AsByteArray((PyLongObject *)v,
+
+            |                           ^~~~~~~~~~~~~~~~~~~
+
+      In file included from /usr/include/python3.14/longobject.h:171,
+
+                       from /usr/include/python3.14/Python.h:92:
+
+      /usr/include/python3.14/cpython/longobject.h:84:17: note: оголошено тут
+
+         84 | PyAPI_FUNC(int) _PyLong_AsByteArray(PyLongObject* v,
+
+            |                 ^~~~~~~~~~~~~~~~~~~
+
+      aiohttp/_websocket.c: У функції «__Pyx_PyInt_As_int»:
+
+      aiohttp/_websocket.c:3238:53: error: «PyLongObject» {також відомий як «struct _longobject»} не має члена з іменем «ob_digit»
+
+       3238 |             const digit* digits = ((PyLongObject*)x)->ob_digit;
+
+            |                                                     ^~
+
+      aiohttp/_websocket.c:3293:53: error: «PyLongObject» {також відомий як «struct _longobject»} не має члена з іменем «ob_digit»
+
+       3293 |             const digit* digits = ((PyLongObject*)x)->ob_digit;
+
+            |                                                     ^~
+
+      aiohttp/_websocket.c:3379:27: error: too few arguments to function «_PyLong_AsByteArray»; expected 6, have 5
+
+       3379 |                 int ret = _PyLong_AsByteArray((PyLongObject *)v,
+
+            |                           ^~~~~~~~~~~~~~~~~~~
+
+      /usr/include/python3.14/cpython/longobject.h:84:17: note: оголошено тут
+
+         84 | PyAPI_FUNC(int) _PyLong_AsByteArray(PyLongObject* v,
+
+            |                 ^~~~~~~~~~~~~~~~~~~
+
+      aiohttp/_websocket.c: У функції «__Pyx_PyIndex_AsSsize_t»:
+
+      aiohttp/_websocket.c:3744:45: error: «PyLongObject» {також відомий як «struct _longobject»} не має члена з іменем «ob_digit»
+
+       3744 |     const digit* digits = ((PyLongObject*)b)->ob_digit;
+
+            |                                             ^~
+
+      error: command '/usr/bin/gcc' failed with exit code 1
+
+      [end of output]
+
+  
+
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+
+  ERROR: Failed building wheel for aiohttp
+
+  Building wheel for tgcrypto (pyproject.toml) ... done
+
+  Created wheel for tgcrypto: filename=tgcrypto-1.2.5-cp314-cp314-linux_x86_64.whl size=45582 sha256=8e4958fb8c5f2cd266b302c1ebe5520b0eda536ae35882c52e039e270fc2f733
+
+  Stored in directory: /home/stani/.cache/pip/wheels/2d/7e/cf/bfce499f020512052d2a4b37409afe6c591763da914db70f0f
+
+Successfully built tgcrypto
+
+Failed to build aiohttp
+
+error: failed-wheel-build-for-install
+
+
+
+× Failed to build installable wheels for some pyproject.toml based projects
+
+╰─> aiohttp
+
+❯ deactivate
+
+rm -rf .venv
+
+❯ python3.12 -m venv .venv
+
+source .venv/bin/activate
+
+❯ # Оновлюємо pip (це важливо для сучасних білдів):
+
+pip install --upgrade pip
+
+
+
+# Встановлюємо залежності:
+
+pip install -r requirements.txt
+
+Requirement already satisfied: pip in ./.venv/lib64/python3.12/site-packages (26.0.1)
+
+Collecting pip
+
+  Using cached pip-26.1.2-py3-none-any.whl.metadata (4.6 kB)
+
+Using cached pip-26.1.2-py3-none-any.whl (1.8 MB)
+
+Installing collected packages: pip
+
+  Attempting uninstall: pip
+
+    Found existing installation: pip 26.0.1
+
+    Uninstalling pip-26.0.1:
+
+      Successfully uninstalled pip-26.0.1
+
+Successfully installed pip-26.1.2
+
+Collecting hikka-tl-new>=2.0.8 (from -r requirements.txt (line 1))
+
+  Using cached Hikka_TL_New-2.0.8-py3-none-any.whl.metadata (3.3 kB)
+
+Collecting hikka-pyro-new>=2.0.103 (from -r requirements.txt (line 2))
+
+  Using cached Hikka_Pyro_New-2.0.103-py3-none-any.whl.metadata (4.6 kB)
+
+Collecting pyrogram==2.0.106 (from -r requirements.txt (line 3))
+
+  Using cached Pyrogram-2.0.106-py3-none-any.whl.metadata (4.4 kB)
+
+Collecting aiofile==3.11.1 (from -r requirements.txt (line 4))
+
+  Using cached aiofile-3.11.1-py3-none-any.whl.metadata (14 kB)
+
+Collecting gitpython==3.1.50 (from -r requirements.txt (line 5))
+
+  Using cached gitpython-3.1.50-py3-none-any.whl.metadata (14 kB)
+
+Collecting meval==2.5 (from -r requirements.txt (line 6))
+
+  Using cached meval-2.5-py3-none-any.whl.metadata (645 bytes)
+
+Collecting aiohttp_jinja2==1.5.1 (from -r requirements.txt (line 7))
+
+  Using cached aiohttp_jinja2-1.5.1-py3-none-any.whl.metadata (8.1 kB)
+
+Collecting aiohttp==3.8.6 (from -r requirements.txt (line 8))
+
+  Using cached aiohttp-3.8.6.tar.gz (7.4 MB)
+
+  Installing build dependencies ... done
+
+  Getting requirements to build wheel ... done
+
+  Preparing metadata (pyproject.toml) ... done
+
+Collecting Jinja2==3.1.6 (from -r requirements.txt (line 9))
+
+  Using cached jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+
+Collecting requests==2.34.2 (from -r requirements.txt (line 10))
+
+  Using cached requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+
+Collecting aiogram==2.25.2 (from -r requirements.txt (line 11))
+
+  Using cached aiogram-2.25.2-py3-none-any.whl.metadata (3.9 kB)
+
+Collecting grapheme==0.6.0 (from -r requirements.txt (line 12))
+
+  Using cached grapheme-0.6.0.tar.gz (207 kB)
+
+  Installing build dependencies ... done
+
+  Getting requirements to build wheel ... done
+
+  Preparing metadata (pyproject.toml) ... done
+
+Collecting emoji==2.15.0 (from -r requirements.txt (line 13))
+
+  Using cached emoji-2.15.0-py3-none-any.whl.metadata (5.7 kB)
+
+Collecting werkzeug==3.1.8 (from -r requirements.txt (line 14))
+
+  Using cached werkzeug-3.1.8-py3-none-any.whl.metadata (4.0 kB)
+
+Collecting psutil==7.2.2 (from -r requirements.txt (line 15))
+
+  Using cached psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl.metadata (22 kB)
+
+Collecting tgcrypto==1.2.5 (from -r requirements.txt (line 16))
+
+  Using cached TgCrypto-1.2.5.tar.gz (37 kB)
+
+  Installing build dependencies ... done
+
+  Getting requirements to build wheel ... done
+
+  Preparing metadata (pyproject.toml) ... done
+
+Collecting rsa==4.9.1 (from -r requirements.txt (line 17))
+
+  Using cached rsa-4.9.1-py3-none-any.whl.metadata (5.6 kB)
+
+Collecting ruamel.yaml==0.19.1 (from -r requirements.txt (line 18))
+
+  Using cached ruamel_yaml-0.19.1-py3-none-any.whl.metadata (16 kB)
+
+Collecting pyaes==1.6.1 (from pyrogram==2.0.106->-r requirements.txt (line 3))
+
+  Using cached pyaes-1.6.1.tar.gz (28 kB)
+
+  Installing build dependencies ... done
+
+  Getting requirements to build wheel ... done
+
+  Preparing metadata (pyproject.toml) ... done
+
+Collecting pysocks==1.7.1 (from pyrogram==2.0.106->-r requirements.txt (line 3))
+
+  Using cached PySocks-1.7.1-py3-none-any.whl.metadata (13 kB)
+
+Collecting caio~=0.9.0 (from aiofile==3.11.1->-r requirements.txt (line 4))
+
+  Downloading caio-0.9.25-cp312-cp312-manylinux_2_34_x86_64.whl.metadata (3.3 kB)
+
+Collecting gitdb<5,>=4.0.1 (from gitpython==3.1.50->-r requirements.txt (line 5))
+
+  Using cached gitdb-4.0.12-py3-none-any.whl.metadata (1.2 kB)
+
+Collecting attrs>=17.3.0 (from aiohttp==3.8.6->-r requirements.txt (line 8))
+
+  Using cached attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+
+Collecting charset-normalizer<4.0,>=2.0 (from aiohttp==3.8.6->-r requirements.txt (line 8))
+
+  Downloading charset_normalizer-3.4.7-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (40 kB)
+
+Collecting multidict<7.0,>=4.5 (from aiohttp==3.8.6->-r requirements.txt (line 8))
+
+  Downloading multidict-6.7.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (5.3 kB)
+
+Collecting async_timeout<5.0,>=4.0.0a3 (from aiohttp==3.8.6->-r requirements.txt (line 8))
+
+  Using cached async_timeout-4.0.3-py3-none-any.whl.metadata (4.2 kB)
+
+Collecting yarl<2.0,>=1.0 (from aiohttp==3.8.6->-r requirements.txt (line 8))
+
+  Downloading yarl-1.24.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (94 kB)
+
+Collecting frozenlist>=1.1.1 (from aiohttp==3.8.6->-r requirements.txt (line 8))
+
+  Downloading frozenlist-1.8.0-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (20 kB)
+
+Collecting aiosignal>=1.1.2 (from aiohttp==3.8.6->-r requirements.txt (line 8))
+
+  Using cached aiosignal-1.4.0-py3-none-any.whl.metadata (3.7 kB)
+
+Collecting MarkupSafe>=2.0 (from Jinja2==3.1.6->-r requirements.txt (line 9))
+
+  Downloading markupsafe-3.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+
+Collecting idna<4,>=2.5 (from requests==2.34.2->-r requirements.txt (line 10))
+
+  Using cached idna-3.18-py3-none-any.whl.metadata (6.1 kB)
+
+Collecting urllib3<3,>=1.26 (from requests==2.34.2->-r requirements.txt (line 10))
+
+  Using cached urllib3-2.7.0-py3-none-any.whl.metadata (6.9 kB)
+
+Collecting certifi>=2023.5.7 (from requests==2.34.2->-r requirements.txt (line 10))
+
+  Using cached certifi-2026.6.17-py3-none-any.whl.metadata (2.5 kB)
+
+Collecting Babel<2.10.0,>=2.9.1 (from aiogram==2.25.2->-r requirements.txt (line 11))
+
+  Using cached Babel-2.9.1-py2.py3-none-any.whl.metadata (1.2 kB)
+
+Collecting magic-filter>=1.0.9 (from aiogram==2.25.2->-r requirements.txt (line 11))
+
+  Using cached magic_filter-1.0.12-py3-none-any.whl.metadata (1.5 kB)
+
+Collecting pyasn1>=0.1.3 (from rsa==4.9.1->-r requirements.txt (line 17))
+
+  Using cached pyasn1-0.6.3-py3-none-any.whl.metadata (8.4 kB)
+
+Collecting pytz>=2015.7 (from Babel<2.10.0,>=2.9.1->aiogram==2.25.2->-r requirements.txt (line 11))
+
+  Using cached pytz-2026.2-py2.py3-none-any.whl.metadata (22 kB)
+
+Collecting smmap<6,>=3.0.1 (from gitdb<5,>=4.0.1->gitpython==3.1.50->-r requirements.txt (line 5))
+
+  Using cached smmap-5.0.3-py3-none-any.whl.metadata (4.6 kB)
+
+Collecting propcache>=0.2.1 (from yarl<2.0,>=1.0->aiohttp==3.8.6->-r requirements.txt (line 8))
+
+  Downloading propcache-0.5.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (16 kB)
+
+Collecting typing-extensions>=4.2 (from aiosignal>=1.1.2->aiohttp==3.8.6->-r requirements.txt (line 8))
+
+  Using cached typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+
+Using cached Pyrogram-2.0.106-py3-none-any.whl (3.6 MB)
+
+Using cached aiofile-3.11.1-py3-none-any.whl (20 kB)
+
+Using cached gitpython-3.1.50-py3-none-any.whl (212 kB)
+
+Using cached meval-2.5-py3-none-any.whl (3.6 kB)
+
+Using cached aiohttp_jinja2-1.5.1-py3-none-any.whl (11 kB)
+
+Using cached jinja2-3.1.6-py3-none-any.whl (134 kB)
+
+Using cached requests-2.34.2-py3-none-any.whl (73 kB)
+
+Using cached aiogram-2.25.2-py3-none-any.whl (203 kB)
+
+Using cached emoji-2.15.0-py3-none-any.whl (608 kB)
+
+Using cached werkzeug-3.1.8-py3-none-any.whl (226 kB)
+
+Using cached psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (155 kB)
+
+Using cached rsa-4.9.1-py3-none-any.whl (34 kB)
+
+Using cached ruamel_yaml-0.19.1-py3-none-any.whl (118 kB)
+
+Using cached PySocks-1.7.1-py3-none-any.whl (16 kB)
+
+Using cached async_timeout-4.0.3-py3-none-any.whl (5.7 kB)
+
+Using cached Babel-2.9.1-py2.py3-none-any.whl (8.8 MB)
+
+Downloading caio-0.9.25-cp312-cp312-manylinux_2_34_x86_64.whl (80 kB)
+
+Downloading charset_normalizer-3.4.7-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (216 kB)
+
+Using cached gitdb-4.0.12-py3-none-any.whl (62 kB)
+
+Using cached idna-3.18-py3-none-any.whl (65 kB)
+
+Downloading multidict-6.7.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (256 kB)
+
+Using cached smmap-5.0.3-py3-none-any.whl (24 kB)
+
+Using cached urllib3-2.7.0-py3-none-any.whl (131 kB)
+
+Downloading yarl-1.24.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (105 kB)
+
+Using cached Hikka_TL_New-2.0.8-py3-none-any.whl (646 kB)
+
+Using cached Hikka_Pyro_New-2.0.103-py3-none-any.whl (3.6 MB)
+
+Using cached aiosignal-1.4.0-py3-none-any.whl (7.5 kB)
+
+Using cached attrs-26.1.0-py3-none-any.whl (67 kB)
+
+Using cached certifi-2026.6.17-py3-none-any.whl (133 kB)
+
+Downloading frozenlist-1.8.0-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (242 kB)
+
+Using cached magic_filter-1.0.12-py3-none-any.whl (11 kB)
+
+Downloading markupsafe-3.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+
+Downloading propcache-0.5.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (61 kB)
+
+Using cached pyasn1-0.6.3-py3-none-any.whl (83 kB)
+
+Using cached pytz-2026.2-py2.py3-none-any.whl (510 kB)
+
+Using cached typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+
+Building wheels for collected packages: aiohttp, grapheme, tgcrypto, pyaes
+
+  Building wheel for aiohttp (pyproject.toml) ... error
+
+  error: subprocess-exited-with-error
+
+  
+
+  × Building wheel for aiohttp (pyproject.toml) did not run successfully.
+
+  │ exit code: 1
+
+  ╰─> [111 lines of output]
+
+      *********************
+
+      * Accelerated build *
+
+      *********************
+
+      /tmp/pip-build-env-2mff5724/overlay/lib/python3.12/site-packages/setuptools/dist.py:765: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+
+      !!
+
+      
+
+              ********************************************************************************
+
+              Please consider removing the following classifiers in favor of a SPDX license expression:
+
+      
+
+              License :: OSI Approved :: Apache Software License
+
+      
+
+              See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+
+              ********************************************************************************
+
+      
+
+      !!
+
+        self._finalize_license_expression()
+
+      running bdist_wheel
+
+      running build
+
+      running build_py
+
+      creating build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/worker.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/web_ws.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/web_urldispatcher.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/web_server.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/web_runner.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/web_routedef.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/web_response.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/web_request.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/web_protocol.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/web_middlewares.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/web_log.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/web_fileresponse.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/web_exceptions.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/web_app.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/web.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/typedefs.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/tracing.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/test_utils.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/tcp_helpers.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/streams.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/resolver.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/pytest_plugin.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/payload_streamer.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/payload.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/multipart.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/log.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/locks.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/http_writer.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/http_websocket.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/http_parser.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/http_exceptions.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/http.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/helpers.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/hdrs.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/formdata.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/cookiejar.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/connector.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/client_ws.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/client_reqrep.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/client_proto.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/client_exceptions.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/client.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/base_protocol.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/abc.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/__init__.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      running egg_info
+
+      writing aiohttp.egg-info/PKG-INFO
+
+      writing dependency_links to aiohttp.egg-info/dependency_links.txt
+
+      writing requirements to aiohttp.egg-info/requires.txt
+
+      writing top-level names to aiohttp.egg-info/top_level.txt
+
+      reading manifest file 'aiohttp.egg-info/SOURCES.txt'
+
+      reading manifest template 'MANIFEST.in'
+
+      warning: no files found matching 'aiohttp' anywhere in distribution
+
+      warning: no previously-included files matching '*.pyc' found anywhere in distribution
+
+      warning: no previously-included files matching '*.pyd' found anywhere in distribution
+
+      warning: no previously-included files matching '*.so' found anywhere in distribution
+
+      warning: no previously-included files matching '*.lib' found anywhere in distribution
+
+      warning: no previously-included files matching '*.dll' found anywhere in distribution
+
+      warning: no previously-included files matching '*.a' found anywhere in distribution
+
+      warning: no previously-included files matching '*.obj' found anywhere in distribution
+
+      warning: no previously-included files found matching 'aiohttp/*.html'
+
+      no previously-included directories found matching 'docs/_build'
+
+      adding license file 'LICENSE.txt'
+
+      writing manifest file 'aiohttp.egg-info/SOURCES.txt'
+
+      copying aiohttp/_cparser.pxd -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/_find_header.pxd -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/_headers.pxi -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/_helpers.pyi -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/_helpers.pyx -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/_http_parser.pyx -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/_http_writer.pyx -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/_websocket.pyx -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/py.typed -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      creating build/lib.linux-x86_64-cpython-312/aiohttp/.hash
+
+      copying aiohttp/.hash/_cparser.pxd.hash -> build/lib.linux-x86_64-cpython-312/aiohttp/.hash
+
+      copying aiohttp/.hash/_find_header.pxd.hash -> build/lib.linux-x86_64-cpython-312/aiohttp/.hash
+
+      copying aiohttp/.hash/_helpers.pyi.hash -> build/lib.linux-x86_64-cpython-312/aiohttp/.hash
+
+      copying aiohttp/.hash/_helpers.pyx.hash -> build/lib.linux-x86_64-cpython-312/aiohttp/.hash
+
+      copying aiohttp/.hash/_http_parser.pyx.hash -> build/lib.linux-x86_64-cpython-312/aiohttp/.hash
+
+      copying aiohttp/.hash/_http_writer.pyx.hash -> build/lib.linux-x86_64-cpython-312/aiohttp/.hash
+
+      copying aiohttp/.hash/_websocket.pyx.hash -> build/lib.linux-x86_64-cpython-312/aiohttp/.hash
+
+      copying aiohttp/.hash/hdrs.py.hash -> build/lib.linux-x86_64-cpython-312/aiohttp/.hash
+
+      running build_ext
+
+      building 'aiohttp._websocket' extension
+
+      creating build/temp.linux-x86_64-cpython-312/aiohttp
+
+      gcc -fno-strict-overflow -Wsign-compare -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DNDEBUG -fexceptions -fcf-protection -fexceptions -fcf-protection -fexceptions -fcf-protection -fPIC -I/home/stani/hikka/hdr0/.venv/include -I/usr/include/python3.12 -c aiohttp/_websocket.c -o build/temp.linux-x86_64-cpython-312/aiohttp/_websocket.o
+
+      aiohttp/_websocket.c:6:10: fatal error: Python.h: Немає такого файла або каталогу
+
+          6 | #include "Python.h"
+
+            |          ^~~~~~~~~~
+
+      compilation terminated.
+
+      error: command '/usr/bin/gcc' failed with exit code 1
+
+      [end of output]
+
+  
+
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+
+  ERROR: Failed building wheel for aiohttp
+
+  Building wheel for grapheme (pyproject.toml) ... done
+
+  Created wheel for grapheme: filename=grapheme-0.6.0-py3-none-any.whl size=209782 sha256=26e64e3248f0dc71ff07bcadd8be036e39275e35fe66fe35513bd1fbc38923cb
+
+  Stored in directory: /home/stani/.cache/pip/wheels/5b/aa/3b/d94434910f5e19ac7f8aa6523d74a46fe06bfcbc7e4b26caf6
+
+  Building wheel for tgcrypto (pyproject.toml) ... error
+
+  error: subprocess-exited-with-error
+
+  
+
+  × Building wheel for tgcrypto (pyproject.toml) did not run successfully.
+
+  │ exit code: 1
+
+  ╰─> [42 lines of output]
+
+      /tmp/pip-build-env-u4vq0gdr/overlay/lib/python3.12/site-packages/setuptools/_distutils/dist.py:287: UserWarning: Unknown distribution option: 'test_suite'
+
+        warnings.warn(msg)
+
+      /tmp/pip-build-env-u4vq0gdr/overlay/lib/python3.12/site-packages/setuptools/dist.py:765: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+
+      !!
+
+      
+
+              ********************************************************************************
+
+              Please consider removing the following classifiers in favor of a SPDX license expression:
+
+      
+
+              License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)
+
+      
+
+              See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+
+              ********************************************************************************
+
+      
+
+      !!
+
+        self._finalize_license_expression()
+
+      running bdist_wheel
+
+      running build
+
+      running build_py
+
+      creating build/lib.linux-x86_64-cpython-312/tests
+
+      copying tests/__init__.py -> build/lib.linux-x86_64-cpython-312/tests
+
+      creating build/lib.linux-x86_64-cpython-312/tests/ige
+
+      copying tests/ige/test_ige.py -> build/lib.linux-x86_64-cpython-312/tests/ige
+
+      copying tests/ige/__init__.py -> build/lib.linux-x86_64-cpython-312/tests/ige
+
+      creating build/lib.linux-x86_64-cpython-312/tests/ctr
+
+      copying tests/ctr/test_ctr.py -> build/lib.linux-x86_64-cpython-312/tests/ctr
+
+      copying tests/ctr/__init__.py -> build/lib.linux-x86_64-cpython-312/tests/ctr
+
+      creating build/lib.linux-x86_64-cpython-312/tests/cbc
+
+      copying tests/cbc/test_cbc.py -> build/lib.linux-x86_64-cpython-312/tests/cbc
+
+      copying tests/cbc/__init__.py -> build/lib.linux-x86_64-cpython-312/tests/cbc
+
+      running build_ext
+
+      building 'tgcrypto' extension
+
+      creating build/temp.linux-x86_64-cpython-312/tgcrypto
+
+      gcc -fno-strict-overflow -Wsign-compare -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DNDEBUG -fexceptions -fcf-protection -fexceptions -fcf-protection -fexceptions -fcf-protection -fPIC -I/home/stani/hikka/hdr0/.venv/include -I/usr/include/python3.12 -c tgcrypto/aes256.c -o build/temp.linux-x86_64-cpython-312/tgcrypto/aes256.o
+
+      gcc -fno-strict-overflow -Wsign-compare -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DNDEBUG -fexceptions -fcf-protection -fexceptions -fcf-protection -fexceptions -fcf-protection -fPIC -I/home/stani/hikka/hdr0/.venv/include -I/usr/include/python3.12 -c tgcrypto/cbc256.c -o build/temp.linux-x86_64-cpython-312/tgcrypto/cbc256.o
+
+      gcc -fno-strict-overflow -Wsign-compare -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DNDEBUG -fexceptions -fcf-protection -fexceptions -fcf-protection -fexceptions -fcf-protection -fPIC -I/home/stani/hikka/hdr0/.venv/include -I/usr/include/python3.12 -c tgcrypto/ctr256.c -o build/temp.linux-x86_64-cpython-312/tgcrypto/ctr256.o
+
+      gcc -fno-strict-overflow -Wsign-compare -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DNDEBUG -fexceptions -fcf-protection -fexceptions -fcf-protection -fexceptions -fcf-protection -fPIC -I/home/stani/hikka/hdr0/.venv/include -I/usr/include/python3.12 -c tgcrypto/ige256.c -o build/temp.linux-x86_64-cpython-312/tgcrypto/ige256.o
+
+      gcc -fno-strict-overflow -Wsign-compare -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DNDEBUG -fexceptions -fcf-protection -fexceptions -fcf-protection -fexceptions -fcf-protection -fPIC -I/home/stani/hikka/hdr0/.venv/include -I/usr/include/python3.12 -c tgcrypto/tgcrypto.c -o build/temp.linux-x86_64-cpython-312/tgcrypto/tgcrypto.o
+
+      tgcrypto/tgcrypto.c:23:10: fatal error: Python.h: Немає такого файла або каталогу
+
+         23 | #include <Python.h>
+
+            |          ^~~~~~~~~~
+
+      compilation terminated.
+
+      error: command '/usr/bin/gcc' failed with exit code 1
+
+      [end of output]
+
+  
+
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+
+  ERROR: Failed building wheel for tgcrypto
+
+  Building wheel for pyaes (pyproject.toml) ... done
+
+  Created wheel for pyaes: filename=pyaes-1.6.1-py3-none-any.whl size=26742 sha256=ba63064e3ab0139dd70d9f9c71202c72d4707f80adb6425e01ac82a33194a366
+
+  Stored in directory: /home/stani/.cache/pip/wheels/d9/43/32/ec313dd557e88e419489b9df40c04dad7b99576bde162496f8
+
+Successfully built grapheme pyaes
+
+Failed to build aiohttp tgcrypto
+
+error: failed-wheel-build-for-install
+
+
+
+× Failed to build installable wheels for some pyproject.toml based projects
+
+╰─> aiohttp, tgcrypto
+
+    ~/hikka/hdr0    main ▓▒░────────────────────────────────────────────────────────────────────────────────────────────────────────────────────░▒▓ 15s   hdr0  
+
+❯     ~/hikka/hdr0    main ▓▒░────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────░▒▓ hdr0  
+
+❯ >....                                                                                                                                                                   
+
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+
+  File "<frozen importlib._bootstrap>", line 1335, in _find_and_load_unlocked
+
+ModuleNotFoundError: No module named 'hikkatl'
+
+
+
+During handling of the above exception, another exception occurred:
+
+
+
+Traceback (most recent call last):
+
+  File "<frozen runpy>", line 203, in _run_module_as_main
+
+  File "<frozen runpy>", line 88, in _run_code
+
+  File "/home/stani/hikka/hdr0/hikka/__main__.py", line 125, in <module>
+
+    deps()
+
+    ~~~~^^
+
+  File "/home/stani/hikka/hdr0/hikka/__main__.py", line 90, in deps
+
+    subprocess.run(
+
+    ~~~~~~~~~~~~~~^
+
+        [
+
+        ^
+
+    ...<11 lines>...
+
+        check=True,
+
+        ^^^^^^^^^^^
+
+    )
+
+    ^
+
+  File "/usr/lib64/python3.14/subprocess.py", line 578, in run
+
+    raise CalledProcessError(retcode, process.args,
+
+                             output=stdout, stderr=stderr)
+
+subprocess.CalledProcessError: Command '['/home/stani/hikka/hdr0/.venv/bin/python3', '-m', 'pip', 'install', '--upgrade', '-q', '--disable-pip-version-check', '--no-warn-script-location', '-r', '/home/stani/hikka/hdr0/requirements.txt']' returned non-zero exit status 1.
+
+  <b1>  ~/hikka/hdr0 <b1>   main ▓▒░────────────────────────────────────────────────────────────────────────────────────────────────────────────────────░▒▓ 31s  <b3> hdr0 
+
+❯
+
+
+
+zsh: parse error near `)'
+
+❯ # Знаходячись у папці проекту:
+
+deactivate
+
+rm -rf .venv
+
+
+
+# Створюємо середовище знову:
+
+python3 -m venv .venv
+
+source .venv/bin/activate
+
+
+
+# Оновлюємо pip (це важливо для сучасних білдів):
+
+pip install --upgrade pip
+
+
+
+# Встановлюємо залежності:
+
+pip install -r requirements.txt
+
+Requirement already satisfied: pip in ./.venv/lib64/python3.14/site-packages (26.0.1)
+
+Collecting pip
+
+  Using cached pip-26.1.2-py3-none-any.whl.metadata (4.6 kB)
+
+Using cached pip-26.1.2-py3-none-any.whl (1.8 MB)
+
+Installing collected packages: pip
+
+  Attempting uninstall: pip
+
+    Found existing installation: pip 26.0.1
+
+    Uninstalling pip-26.0.1:
+
+      Successfully uninstalled pip-26.0.1
+
+Successfully installed pip-26.1.2
+
+Collecting hikka-tl-new>=2.0.8 (from -r requirements.txt (line 1))
+
+  Using cached Hikka_TL_New-2.0.8-py3-none-any.whl.metadata (3.3 kB)
+
+Collecting hikka-pyro-new>=2.0.103 (from -r requirements.txt (line 2))
+
+  Using cached Hikka_Pyro_New-2.0.103-py3-none-any.whl.metadata (4.6 kB)
+
+Collecting pyrogram==2.0.106 (from -r requirements.txt (line 3))
+
+  Using cached Pyrogram-2.0.106-py3-none-any.whl.metadata (4.4 kB)
+
+Collecting aiofile==3.11.1 (from -r requirements.txt (line 4))
+
+  Using cached aiofile-3.11.1-py3-none-any.whl.metadata (14 kB)
+
+Collecting gitpython==3.1.50 (from -r requirements.txt (line 5))
+
+  Using cached gitpython-3.1.50-py3-none-any.whl.metadata (14 kB)
+
+Collecting meval==2.5 (from -r requirements.txt (line 6))
+
+  Using cached meval-2.5-py3-none-any.whl.metadata (645 bytes)
+
+Collecting aiohttp_jinja2==1.5.1 (from -r requirements.txt (line 7))
+
+  Using cached aiohttp_jinja2-1.5.1-py3-none-any.whl.metadata (8.1 kB)
+
+Collecting aiohttp==3.8.6 (from -r requirements.txt (line 8))
+
+  Using cached aiohttp-3.8.6.tar.gz (7.4 MB)
+
+  Installing build dependencies ... done
+
+  Getting requirements to build wheel ... done
+
+  Preparing metadata (pyproject.toml) ... done
+
+Collecting Jinja2==3.1.6 (from -r requirements.txt (line 9))
+
+  Using cached jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+
+Collecting requests==2.34.2 (from -r requirements.txt (line 10))
+
+  Using cached requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+
+Collecting aiogram==2.25.2 (from -r requirements.txt (line 11))
+
+  Using cached aiogram-2.25.2-py3-none-any.whl.metadata (3.9 kB)
+
+Collecting grapheme==0.6.0 (from -r requirements.txt (line 12))
+
+  Using cached grapheme-0.6.0-py3-none-any.whl
+
+Collecting emoji==2.15.0 (from -r requirements.txt (line 13))
+
+  Using cached emoji-2.15.0-py3-none-any.whl.metadata (5.7 kB)
+
+Collecting werkzeug==3.1.8 (from -r requirements.txt (line 14))
+
+  Using cached werkzeug-3.1.8-py3-none-any.whl.metadata (4.0 kB)
+
+Collecting psutil==7.2.2 (from -r requirements.txt (line 15))
+
+  Using cached psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl.metadata (22 kB)
+
+Collecting tgcrypto==1.2.5 (from -r requirements.txt (line 16))
+
+  Using cached TgCrypto-1.2.5.tar.gz (37 kB)
+
+  Installing build dependencies ... done
+
+  Getting requirements to build wheel ... done
+
+  Preparing metadata (pyproject.toml) ... done
+
+Collecting rsa==4.9.1 (from -r requirements.txt (line 17))
+
+  Using cached rsa-4.9.1-py3-none-any.whl.metadata (5.6 kB)
+
+Collecting ruamel.yaml==0.19.1 (from -r requirements.txt (line 18))
+
+  Using cached ruamel_yaml-0.19.1-py3-none-any.whl.metadata (16 kB)
+
+Collecting pyaes==1.6.1 (from pyrogram==2.0.106->-r requirements.txt (line 3))
+
+  Using cached pyaes-1.6.1-py3-none-any.whl
+
+Collecting pysocks==1.7.1 (from pyrogram==2.0.106->-r requirements.txt (line 3))
+
+  Using cached PySocks-1.7.1-py3-none-any.whl.metadata (13 kB)
+
+Collecting caio~=0.9.0 (from aiofile==3.11.1->-r requirements.txt (line 4))
+
+  Using cached caio-0.9.25-cp314-cp314-manylinux_2_34_x86_64.whl.metadata (3.3 kB)
+
+Collecting gitdb<5,>=4.0.1 (from gitpython==3.1.50->-r requirements.txt (line 5))
+
+  Using cached gitdb-4.0.12-py3-none-any.whl.metadata (1.2 kB)
+
+Collecting attrs>=17.3.0 (from aiohttp==3.8.6->-r requirements.txt (line 8))
+
+  Using cached attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+
+Collecting charset-normalizer<4.0,>=2.0 (from aiohttp==3.8.6->-r requirements.txt (line 8))
+
+  Using cached charset_normalizer-3.4.7-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (40 kB)
+
+Collecting multidict<7.0,>=4.5 (from aiohttp==3.8.6->-r requirements.txt (line 8))
+
+  Using cached multidict-6.7.1-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (5.3 kB)
+
+Collecting async_timeout<5.0,>=4.0.0a3 (from aiohttp==3.8.6->-r requirements.txt (line 8))
+
+  Using cached async_timeout-4.0.3-py3-none-any.whl.metadata (4.2 kB)
+
+Collecting yarl<2.0,>=1.0 (from aiohttp==3.8.6->-r requirements.txt (line 8))
+
+  Using cached yarl-1.24.2-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (94 kB)
+
+Collecting frozenlist>=1.1.1 (from aiohttp==3.8.6->-r requirements.txt (line 8))
+
+  Using cached frozenlist-1.8.0-cp314-cp314-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (20 kB)
+
+Collecting aiosignal>=1.1.2 (from aiohttp==3.8.6->-r requirements.txt (line 8))
+
+  Using cached aiosignal-1.4.0-py3-none-any.whl.metadata (3.7 kB)
+
+Collecting MarkupSafe>=2.0 (from Jinja2==3.1.6->-r requirements.txt (line 9))
+
+  Using cached markupsafe-3.0.3-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+
+Collecting idna<4,>=2.5 (from requests==2.34.2->-r requirements.txt (line 10))
+
+  Using cached idna-3.18-py3-none-any.whl.metadata (6.1 kB)
+
+Collecting urllib3<3,>=1.26 (from requests==2.34.2->-r requirements.txt (line 10))
+
+  Using cached urllib3-2.7.0-py3-none-any.whl.metadata (6.9 kB)
+
+Collecting certifi>=2023.5.7 (from requests==2.34.2->-r requirements.txt (line 10))
+
+  Using cached certifi-2026.6.17-py3-none-any.whl.metadata (2.5 kB)
+
+Collecting Babel<2.10.0,>=2.9.1 (from aiogram==2.25.2->-r requirements.txt (line 11))
+
+  Using cached Babel-2.9.1-py2.py3-none-any.whl.metadata (1.2 kB)
+
+Collecting magic-filter>=1.0.9 (from aiogram==2.25.2->-r requirements.txt (line 11))
+
+  Using cached magic_filter-1.0.12-py3-none-any.whl.metadata (1.5 kB)
+
+Collecting pyasn1>=0.1.3 (from rsa==4.9.1->-r requirements.txt (line 17))
+
+  Using cached pyasn1-0.6.3-py3-none-any.whl.metadata (8.4 kB)
+
+Collecting pytz>=2015.7 (from Babel<2.10.0,>=2.9.1->aiogram==2.25.2->-r requirements.txt (line 11))
+
+  Using cached pytz-2026.2-py2.py3-none-any.whl.metadata (22 kB)
+
+Collecting smmap<6,>=3.0.1 (from gitdb<5,>=4.0.1->gitpython==3.1.50->-r requirements.txt (line 5))
+
+  Using cached smmap-5.0.3-py3-none-any.whl.metadata (4.6 kB)
+
+Collecting propcache>=0.2.1 (from yarl<2.0,>=1.0->aiohttp==3.8.6->-r requirements.txt (line 8))
+
+  Using cached propcache-0.5.2-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (16 kB)
+
+Using cached Pyrogram-2.0.106-py3-none-any.whl (3.6 MB)
+
+Using cached aiofile-3.11.1-py3-none-any.whl (20 kB)
+
+Using cached gitpython-3.1.50-py3-none-any.whl (212 kB)
+
+Using cached meval-2.5-py3-none-any.whl (3.6 kB)
+
+Using cached aiohttp_jinja2-1.5.1-py3-none-any.whl (11 kB)
+
+Using cached jinja2-3.1.6-py3-none-any.whl (134 kB)
+
+Using cached requests-2.34.2-py3-none-any.whl (73 kB)
+
+Using cached aiogram-2.25.2-py3-none-any.whl (203 kB)
+
+Using cached emoji-2.15.0-py3-none-any.whl (608 kB)
+
+Using cached werkzeug-3.1.8-py3-none-any.whl (226 kB)
+
+Using cached psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (155 kB)
+
+Using cached rsa-4.9.1-py3-none-any.whl (34 kB)
+
+Using cached ruamel_yaml-0.19.1-py3-none-any.whl (118 kB)
+
+Using cached PySocks-1.7.1-py3-none-any.whl (16 kB)
+
+Using cached async_timeout-4.0.3-py3-none-any.whl (5.7 kB)
+
+Using cached Babel-2.9.1-py2.py3-none-any.whl (8.8 MB)
+
+Using cached caio-0.9.25-cp314-cp314-manylinux_2_34_x86_64.whl (80 kB)
+
+Using cached charset_normalizer-3.4.7-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (215 kB)
+
+Using cached gitdb-4.0.12-py3-none-any.whl (62 kB)
+
+Using cached idna-3.18-py3-none-any.whl (65 kB)
+
+Using cached multidict-6.7.1-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (248 kB)
+
+Using cached smmap-5.0.3-py3-none-any.whl (24 kB)
+
+Using cached urllib3-2.7.0-py3-none-any.whl (131 kB)
+
+Using cached yarl-1.24.2-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (107 kB)
+
+Using cached Hikka_TL_New-2.0.8-py3-none-any.whl (646 kB)
+
+Using cached Hikka_Pyro_New-2.0.103-py3-none-any.whl (3.6 MB)
+
+Using cached aiosignal-1.4.0-py3-none-any.whl (7.5 kB)
+
+Using cached attrs-26.1.0-py3-none-any.whl (67 kB)
+
+Using cached certifi-2026.6.17-py3-none-any.whl (133 kB)
+
+Using cached frozenlist-1.8.0-cp314-cp314-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (231 kB)
+
+Using cached magic_filter-1.0.12-py3-none-any.whl (11 kB)
+
+Using cached markupsafe-3.0.3-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (23 kB)
+
+Using cached propcache-0.5.2-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (61 kB)
+
+Using cached pyasn1-0.6.3-py3-none-any.whl (83 kB)
+
+Using cached pytz-2026.2-py2.py3-none-any.whl (510 kB)
+
+Building wheels for collected packages: aiohttp, tgcrypto
+
+  Building wheel for aiohttp (pyproject.toml) ... error
+
+  error: subprocess-exited-with-error
+
+  
+
+  × Building wheel for aiohttp (pyproject.toml) did not run successfully.
+
+  │ exit code: 1
+
+  ╰─> [201 lines of output]
+
+      *********************
+
+      * Accelerated build *
+
+      *********************
+
+      /tmp/pip-build-env-i85hai0a/overlay/lib/python3.14/site-packages/setuptools/dist.py:765: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+
+      !!
+
+      
+
+              ********************************************************************************
+
+              Please consider removing the following classifiers in favor of a SPDX license expression:
+
+      
+
+              License :: OSI Approved :: Apache Software License
+
+      
+
+              See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+
+              ********************************************************************************
+
+      
+
+      !!
+
+        self._finalize_license_expression()
+
+      running bdist_wheel
+
+      running build
+
+      running build_py
+
+      creating build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/worker.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/web_ws.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/web_urldispatcher.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/web_server.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/web_runner.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/web_routedef.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/web_response.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/web_request.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/web_protocol.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/web_middlewares.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/web_log.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/web_fileresponse.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/web_exceptions.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/web_app.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/web.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/typedefs.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/tracing.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/test_utils.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/tcp_helpers.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/streams.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/resolver.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/pytest_plugin.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/payload_streamer.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/payload.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/multipart.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/log.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/locks.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/http_writer.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/http_websocket.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/http_parser.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/http_exceptions.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/http.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/helpers.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/hdrs.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/formdata.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/cookiejar.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/connector.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/client_ws.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/client_reqrep.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/client_proto.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/client_exceptions.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/client.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/base_protocol.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/abc.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/__init__.py -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      running egg_info
+
+      writing aiohttp.egg-info/PKG-INFO
+
+      writing dependency_links to aiohttp.egg-info/dependency_links.txt
+
+      writing requirements to aiohttp.egg-info/requires.txt
+
+      writing top-level names to aiohttp.egg-info/top_level.txt
+
+      reading manifest file 'aiohttp.egg-info/SOURCES.txt'
+
+      reading manifest template 'MANIFEST.in'
+
+      warning: no files found matching 'aiohttp' anywhere in distribution
+
+      warning: no previously-included files matching '*.pyc' found anywhere in distribution
+
+      warning: no previously-included files matching '*.pyd' found anywhere in distribution
+
+      warning: no previously-included files matching '*.so' found anywhere in distribution
+
+      warning: no previously-included files matching '*.lib' found anywhere in distribution
+
+      warning: no previously-included files matching '*.dll' found anywhere in distribution
+
+      warning: no previously-included files matching '*.a' found anywhere in distribution
+
+      warning: no previously-included files matching '*.obj' found anywhere in distribution
+
+      warning: no previously-included files found matching 'aiohttp/*.html'
+
+      no previously-included directories found matching 'docs/_build'
+
+      adding license file 'LICENSE.txt'
+
+      writing manifest file 'aiohttp.egg-info/SOURCES.txt'
+
+      copying aiohttp/_cparser.pxd -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/_find_header.pxd -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/_headers.pxi -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/_helpers.pyi -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/_helpers.pyx -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/_http_parser.pyx -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/_http_writer.pyx -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/_websocket.pyx -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      copying aiohttp/py.typed -> build/lib.linux-x86_64-cpython-314/aiohttp
+
+      creating build/lib.linux-x86_64-cpython-314/aiohttp/.hash
+
+      copying aiohttp/.hash/_cparser.pxd.hash -> build/lib.linux-x86_64-cpython-314/aiohttp/.hash
+
+      copying aiohttp/.hash/_find_header.pxd.hash -> build/lib.linux-x86_64-cpython-314/aiohttp/.hash
+
+      copying aiohttp/.hash/_helpers.pyi.hash -> build/lib.linux-x86_64-cpython-314/aiohttp/.hash
+
+      copying aiohttp/.hash/_helpers.pyx.hash -> build/lib.linux-x86_64-cpython-314/aiohttp/.hash
+
+      copying aiohttp/.hash/_http_parser.pyx.hash -> build/lib.linux-x86_64-cpython-314/aiohttp/.hash
+
+      copying aiohttp/.hash/_http_writer.pyx.hash -> build/lib.linux-x86_64-cpython-314/aiohttp/.hash
+
+      copying aiohttp/.hash/_websocket.pyx.hash -> build/lib.linux-x86_64-cpython-314/aiohttp/.hash
+
+      copying aiohttp/.hash/hdrs.py.hash -> build/lib.linux-x86_64-cpython-314/aiohttp/.hash
+
+      running build_ext
+
+      building 'aiohttp._websocket' extension
+
+      creating build/temp.linux-x86_64-cpython-314/aiohttp
+
+      gcc -fno-strict-overflow -Wsign-compare -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DNDEBUG -fcf-protection -fexceptions -fcf-protection -fexceptions -fcf-protection -fexceptions -O3 -fPIC -I/home/stani/hikka/hdr0/.venv/include -I/usr/include/python3.14 -c aiohttp/_websocket.c -o build/temp.linux-x86_64-cpython-314/aiohttp/_websocket.o
+
+      aiohttp/_websocket.c:826:1: warning: «Py_UNICODE» застарілий [-Wdeprecated-declarations]
+
+        826 | static CYTHON_INLINE size_t __Pyx_Py_UNICODE_strlen(const Py_UNICODE *u) {
+
+            | ^~~~~~
+
+      aiohttp/_websocket.c: У функції «__Pyx_Py_UNICODE_strlen»:
+
+      aiohttp/_websocket.c:827:5: warning: «Py_UNICODE» застарілий [-Wdeprecated-declarations]
+
+        827 |     const Py_UNICODE *u_end = u;
+
+            |     ^~~~~
+
+      aiohttp/_websocket.c: У функції «__pyx_pf_7aiohttp_10_websocket__websocket_mask_cython»:
+
+      aiohttp/_websocket.c:1475:3: warning: «Py_OptimizeFlag» застарілий [-Wdeprecated-declarations]
+
+       1475 |   if (unlikely(!Py_OptimizeFlag)) {
+
+            |   ^~
+
+      In file included from /usr/include/python3.14/Python.h:87,
+
+                       from aiohttp/_websocket.c:6:
+
+      /usr/include/python3.14/cpython/pydebug.h:13:37: note: оголошено тут
+
+         13 | Py_DEPRECATED(3.12) PyAPI_DATA(int) Py_OptimizeFlag;
+
+            |                                     ^~~~~~~~~~~~~~~
+
+      aiohttp/_websocket.c: У функції «__Pyx_get_tp_dict_version»:
+
+      aiohttp/_websocket.c:1118:63: error: «PyDictObject» не має члена з іменем «ma_version_tag»
+
+       1118 | #define __PYX_GET_DICT_VERSION(dict)  (((PyDictObject*)(dict))->ma_version_tag)
+
+            |                                                               ^~
+
+      aiohttp/_websocket.c:2680:27: note: in expansion of macro «__PYX_GET_DICT_VERSION»
+
+       2680 |     return likely(dict) ? __PYX_GET_DICT_VERSION(dict) : 0;
+
+            |                           ^~~~~~~~~~~~~~~~~~~~~~
+
+      aiohttp/_websocket.c: У функції «__Pyx_get_object_dict_version»:
+
+      aiohttp/_websocket.c:1118:63: error: «PyDictObject» не має члена з іменем «ma_version_tag»
+
+       1118 | #define __PYX_GET_DICT_VERSION(dict)  (((PyDictObject*)(dict))->ma_version_tag)
+
+            |                                                               ^~
+
+      aiohttp/_websocket.c:2692:36: note: in expansion of macro «__PYX_GET_DICT_VERSION»
+
+       2692 |     return (dictptr && *dictptr) ? __PYX_GET_DICT_VERSION(*dictptr) : 0;
+
+            |                                    ^~~~~~~~~~~~~~~~~~~~~~
+
+      aiohttp/_websocket.c: У функції «__Pyx_object_dict_version_matches»:
+
+      aiohttp/_websocket.c:1118:63: error: «PyDictObject» не має члена з іменем «ma_version_tag»
+
+       1118 | #define __PYX_GET_DICT_VERSION(dict)  (((PyDictObject*)(dict))->ma_version_tag)
+
+            |                                                               ^~
+
+      aiohttp/_websocket.c:936:43: note: in definition of macro «unlikely»
+
+        936 |   #define unlikely(x) __builtin_expect(!!(x), 0)
+
+            |                                           ^
+
+      aiohttp/_websocket.c:2696:56: note: in expansion of macro «__PYX_GET_DICT_VERSION»
+
+       2696 |     if (unlikely(!dict) || unlikely(tp_dict_version != __PYX_GET_DICT_VERSION(dict)))
+
+            |                                                        ^~~~~~~~~~~~~~~~~~~~~~
+
+      aiohttp/_websocket.c: У функції «__Pyx_CLineForTraceback»:
+
+      aiohttp/_websocket.c:1118:63: error: «PyDictObject» не має члена з іменем «ma_version_tag»
+
+       1118 | #define __PYX_GET_DICT_VERSION(dict)  (((PyDictObject*)(dict))->ma_version_tag)
+
+            |                                                               ^~
+
+      aiohttp/_websocket.c:935:43: note: in definition of macro «likely»
+
+        935 |   #define likely(x)   __builtin_expect(!!(x), 1)
+
+            |                                           ^
+
+      aiohttp/_websocket.c:1125:16: note: in expansion of macro «__PYX_GET_DICT_VERSION»
+
+       1125 |     if (likely(__PYX_GET_DICT_VERSION(DICT) == __pyx_dict_version)) {\
+
+            |                ^~~~~~~~~~~~~~~~~~~~~~
+
+      aiohttp/_websocket.c:2741:9: note: in expansion of macro «__PYX_PY_DICT_LOOKUP_IF_MODIFIED»
+
+       2741 |         __PYX_PY_DICT_LOOKUP_IF_MODIFIED(
+
+            |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+      aiohttp/_websocket.c:1118:63: error: «PyDictObject» не має члена з іменем «ma_version_tag»
+
+       1118 | #define __PYX_GET_DICT_VERSION(dict)  (((PyDictObject*)(dict))->ma_version_tag)
+
+            |                                                               ^~
+
+      aiohttp/_websocket.c:1129:30: note: in expansion of macro «__PYX_GET_DICT_VERSION»
+
+       1129 |         __pyx_dict_version = __PYX_GET_DICT_VERSION(DICT);\
+
+            |                              ^~~~~~~~~~~~~~~~~~~~~~
+
+      aiohttp/_websocket.c:2741:9: note: in expansion of macro «__PYX_PY_DICT_LOOKUP_IF_MODIFIED»
+
+       2741 |         __PYX_PY_DICT_LOOKUP_IF_MODIFIED(
+
+            |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+      aiohttp/_websocket.c: У функції «__Pyx_PyInt_As_long»:
+
+      aiohttp/_websocket.c:3042:53: error: «PyLongObject» {також відомий як «struct _longobject»} не має члена з іменем «ob_digit»
+
+       3042 |             const digit* digits = ((PyLongObject*)x)->ob_digit;
+
+            |                                                     ^~
+
+      aiohttp/_websocket.c:3097:53: error: «PyLongObject» {також відомий як «struct _longobject»} не має члена з іменем «ob_digit»
+
+       3097 |             const digit* digits = ((PyLongObject*)x)->ob_digit;
+
+            |                                                     ^~
+
+      aiohttp/_websocket.c:3183:27: error: too few arguments to function «_PyLong_AsByteArray»; expected 6, have 5
+
+       3183 |                 int ret = _PyLong_AsByteArray((PyLongObject *)v,
+
+            |                           ^~~~~~~~~~~~~~~~~~~
+
+      In file included from /usr/include/python3.14/longobject.h:171,
+
+                       from /usr/include/python3.14/Python.h:92:
+
+      /usr/include/python3.14/cpython/longobject.h:84:17: note: оголошено тут
+
+         84 | PyAPI_FUNC(int) _PyLong_AsByteArray(PyLongObject* v,
+
+            |                 ^~~~~~~~~~~~~~~~~~~
+
+      aiohttp/_websocket.c: У функції «__Pyx_PyInt_As_int»:
+
+      aiohttp/_websocket.c:3238:53: error: «PyLongObject» {також відомий як «struct _longobject»} не має члена з іменем «ob_digit»
+
+       3238 |             const digit* digits = ((PyLongObject*)x)->ob_digit;
+
+            |                                                     ^~
+
+      aiohttp/_websocket.c:3293:53: error: «PyLongObject» {також відомий як «struct _longobject»} не має члена з іменем «ob_digit»
+
+       3293 |             const digit* digits = ((PyLongObject*)x)->ob_digit;
+
+            |                                                     ^~
+
+      aiohttp/_websocket.c:3379:27: error: too few arguments to function «_PyLong_AsByteArray»; expected 6, have 5
+
+       3379 |                 int ret = _PyLong_AsByteArray((PyLongObject *)v,
+
+            |                           ^~~~~~~~~~~~~~~~~~~
+
+      /usr/include/python3.14/cpython/longobject.h:84:17: note: оголошено тут
+
+         84 | PyAPI_FUNC(int) _PyLong_AsByteArray(PyLongObject* v,
+
+            |                 ^~~~~~~~~~~~~~~~~~~
+
+      aiohttp/_websocket.c: У функції «__Pyx_PyIndex_AsSsize_t»:
+
+      aiohttp/_websocket.c:3744:45: error: «PyLongObject» {також відомий як «struct _longobject»} не має члена з іменем «ob_digit»
+
+       3744 |     const digit* digits = ((PyLongObject*)b)->ob_digit;
+
+            |                                             ^~
+
+      error: command '/usr/bin/gcc' failed with exit code 1
+
+      [end of output]
+
+  
+
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+
+  ERROR: Failed building wheel for aiohttp
+
+  Building wheel for tgcrypto (pyproject.toml) ... done
+
+  Created wheel for tgcrypto: filename=tgcrypto-1.2.5-cp314-cp314-linux_x86_64.whl size=45582 sha256=8e4958fb8c5f2cd266b302c1ebe5520b0eda536ae35882c52e039e270fc2f733
+
+  Stored in directory: /home/stani/.cache/pip/wheels/2d/7e/cf/bfce499f020512052d2a4b37409afe6c591763da914db70f0f
+
+Successfully built tgcrypto
+
+Failed to build aiohttp
+
+error: failed-wheel-build-for-install
+
+
+
+× Failed to build installable wheels for some pyproject.toml based projects
+
+╰─> aiohttp
+
+❯ deactivate
+
+rm -rf .venv
+
+❯ python3.12 -m venv .venv
+
+source .venv/bin/activate
+
+❯ # Оновлюємо pip (це важливо для сучасних білдів):
+
+pip install --upgrade pip
+
+
+
+# Встановлюємо залежності:
+
+pip install -r requirements.txt
+
+Requirement already satisfied: pip in ./.venv/lib64/python3.12/site-packages (26.0.1)
+
+Collecting pip
+
+  Using cached pip-26.1.2-py3-none-any.whl.metadata (4.6 kB)
+
+Using cached pip-26.1.2-py3-none-any.whl (1.8 MB)
+
+Installing collected packages: pip
+
+  Attempting uninstall: pip
+
+    Found existing installation: pip 26.0.1
+
+    Uninstalling pip-26.0.1:
+
+      Successfully uninstalled pip-26.0.1
+
+Successfully installed pip-26.1.2
+
+Collecting hikka-tl-new>=2.0.8 (from -r requirements.txt (line 1))
+
+  Using cached Hikka_TL_New-2.0.8-py3-none-any.whl.metadata (3.3 kB)
+
+Collecting hikka-pyro-new>=2.0.103 (from -r requirements.txt (line 2))
+
+  Using cached Hikka_Pyro_New-2.0.103-py3-none-any.whl.metadata (4.6 kB)
+
+Collecting pyrogram==2.0.106 (from -r requirements.txt (line 3))
+
+  Using cached Pyrogram-2.0.106-py3-none-any.whl.metadata (4.4 kB)
+
+Collecting aiofile==3.11.1 (from -r requirements.txt (line 4))
+
+  Using cached aiofile-3.11.1-py3-none-any.whl.metadata (14 kB)
+
+Collecting gitpython==3.1.50 (from -r requirements.txt (line 5))
+
+  Using cached gitpython-3.1.50-py3-none-any.whl.metadata (14 kB)
+
+Collecting meval==2.5 (from -r requirements.txt (line 6))
+
+  Using cached meval-2.5-py3-none-any.whl.metadata (645 bytes)
+
+Collecting aiohttp_jinja2==1.5.1 (from -r requirements.txt (line 7))
+
+  Using cached aiohttp_jinja2-1.5.1-py3-none-any.whl.metadata (8.1 kB)
+
+Collecting aiohttp==3.8.6 (from -r requirements.txt (line 8))
+
+  Using cached aiohttp-3.8.6.tar.gz (7.4 MB)
+
+  Installing build dependencies ... done
+
+  Getting requirements to build wheel ... done
+
+  Preparing metadata (pyproject.toml) ... done
+
+Collecting Jinja2==3.1.6 (from -r requirements.txt (line 9))
+
+  Using cached jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+
+Collecting requests==2.34.2 (from -r requirements.txt (line 10))
+
+  Using cached requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+
+Collecting aiogram==2.25.2 (from -r requirements.txt (line 11))
+
+  Using cached aiogram-2.25.2-py3-none-any.whl.metadata (3.9 kB)
+
+Collecting grapheme==0.6.0 (from -r requirements.txt (line 12))
+
+  Using cached grapheme-0.6.0.tar.gz (207 kB)
+
+  Installing build dependencies ... done
+
+  Getting requirements to build wheel ... done
+
+  Preparing metadata (pyproject.toml) ... done
+
+Collecting emoji==2.15.0 (from -r requirements.txt (line 13))
+
+  Using cached emoji-2.15.0-py3-none-any.whl.metadata (5.7 kB)
+
+Collecting werkzeug==3.1.8 (from -r requirements.txt (line 14))
+
+  Using cached werkzeug-3.1.8-py3-none-any.whl.metadata (4.0 kB)
+
+Collecting psutil==7.2.2 (from -r requirements.txt (line 15))
+
+  Using cached psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl.metadata (22 kB)
+
+Collecting tgcrypto==1.2.5 (from -r requirements.txt (line 16))
+
+  Using cached TgCrypto-1.2.5.tar.gz (37 kB)
+
+  Installing build dependencies ... done
+
+  Getting requirements to build wheel ... done
+
+  Preparing metadata (pyproject.toml) ... done
+
+Collecting rsa==4.9.1 (from -r requirements.txt (line 17))
+
+  Using cached rsa-4.9.1-py3-none-any.whl.metadata (5.6 kB)
+
+Collecting ruamel.yaml==0.19.1 (from -r requirements.txt (line 18))
+
+  Using cached ruamel_yaml-0.19.1-py3-none-any.whl.metadata (16 kB)
+
+Collecting pyaes==1.6.1 (from pyrogram==2.0.106->-r requirements.txt (line 3))
+
+  Using cached pyaes-1.6.1.tar.gz (28 kB)
+
+  Installing build dependencies ... done
+
+  Getting requirements to build wheel ... done
+
+  Preparing metadata (pyproject.toml) ... done
+
+Collecting pysocks==1.7.1 (from pyrogram==2.0.106->-r requirements.txt (line 3))
+
+  Using cached PySocks-1.7.1-py3-none-any.whl.metadata (13 kB)
+
+Collecting caio~=0.9.0 (from aiofile==3.11.1->-r requirements.txt (line 4))
+
+  Downloading caio-0.9.25-cp312-cp312-manylinux_2_34_x86_64.whl.metadata (3.3 kB)
+
+Collecting gitdb<5,>=4.0.1 (from gitpython==3.1.50->-r requirements.txt (line 5))
+
+  Using cached gitdb-4.0.12-py3-none-any.whl.metadata (1.2 kB)
+
+Collecting attrs>=17.3.0 (from aiohttp==3.8.6->-r requirements.txt (line 8))
+
+  Using cached attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+
+Collecting charset-normalizer<4.0,>=2.0 (from aiohttp==3.8.6->-r requirements.txt (line 8))
+
+  Downloading charset_normalizer-3.4.7-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (40 kB)
+
+Collecting multidict<7.0,>=4.5 (from aiohttp==3.8.6->-r requirements.txt (line 8))
+
+  Downloading multidict-6.7.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (5.3 kB)
+
+Collecting async_timeout<5.0,>=4.0.0a3 (from aiohttp==3.8.6->-r requirements.txt (line 8))
+
+  Using cached async_timeout-4.0.3-py3-none-any.whl.metadata (4.2 kB)
+
+Collecting yarl<2.0,>=1.0 (from aiohttp==3.8.6->-r requirements.txt (line 8))
+
+  Downloading yarl-1.24.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (94 kB)
+
+Collecting frozenlist>=1.1.1 (from aiohttp==3.8.6->-r requirements.txt (line 8))
+
+  Downloading frozenlist-1.8.0-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (20 kB)
+
+Collecting aiosignal>=1.1.2 (from aiohttp==3.8.6->-r requirements.txt (line 8))
+
+  Using cached aiosignal-1.4.0-py3-none-any.whl.metadata (3.7 kB)
+
+Collecting MarkupSafe>=2.0 (from Jinja2==3.1.6->-r requirements.txt (line 9))
+
+  Downloading markupsafe-3.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+
+Collecting idna<4,>=2.5 (from requests==2.34.2->-r requirements.txt (line 10))
+
+  Using cached idna-3.18-py3-none-any.whl.metadata (6.1 kB)
+
+Collecting urllib3<3,>=1.26 (from requests==2.34.2->-r requirements.txt (line 10))
+
+  Using cached urllib3-2.7.0-py3-none-any.whl.metadata (6.9 kB)
+
+Collecting certifi>=2023.5.7 (from requests==2.34.2->-r requirements.txt (line 10))
+
+  Using cached certifi-2026.6.17-py3-none-any.whl.metadata (2.5 kB)
+
+Collecting Babel<2.10.0,>=2.9.1 (from aiogram==2.25.2->-r requirements.txt (line 11))
+
+  Using cached Babel-2.9.1-py2.py3-none-any.whl.metadata (1.2 kB)
+
+Collecting magic-filter>=1.0.9 (from aiogram==2.25.2->-r requirements.txt (line 11))
+
+  Using cached magic_filter-1.0.12-py3-none-any.whl.metadata (1.5 kB)
+
+Collecting pyasn1>=0.1.3 (from rsa==4.9.1->-r requirements.txt (line 17))
+
+  Using cached pyasn1-0.6.3-py3-none-any.whl.metadata (8.4 kB)
+
+Collecting pytz>=2015.7 (from Babel<2.10.0,>=2.9.1->aiogram==2.25.2->-r requirements.txt (line 11))
+
+  Using cached pytz-2026.2-py2.py3-none-any.whl.metadata (22 kB)
+
+Collecting smmap<6,>=3.0.1 (from gitdb<5,>=4.0.1->gitpython==3.1.50->-r requirements.txt (line 5))
+
+  Using cached smmap-5.0.3-py3-none-any.whl.metadata (4.6 kB)
+
+Collecting propcache>=0.2.1 (from yarl<2.0,>=1.0->aiohttp==3.8.6->-r requirements.txt (line 8))
+
+  Downloading propcache-0.5.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (16 kB)
+
+Collecting typing-extensions>=4.2 (from aiosignal>=1.1.2->aiohttp==3.8.6->-r requirements.txt (line 8))
+
+  Using cached typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+
+Using cached Pyrogram-2.0.106-py3-none-any.whl (3.6 MB)
+
+Using cached aiofile-3.11.1-py3-none-any.whl (20 kB)
+
+Using cached gitpython-3.1.50-py3-none-any.whl (212 kB)
+
+Using cached meval-2.5-py3-none-any.whl (3.6 kB)
+
+Using cached aiohttp_jinja2-1.5.1-py3-none-any.whl (11 kB)
+
+Using cached jinja2-3.1.6-py3-none-any.whl (134 kB)
+
+Using cached requests-2.34.2-py3-none-any.whl (73 kB)
+
+Using cached aiogram-2.25.2-py3-none-any.whl (203 kB)
+
+Using cached emoji-2.15.0-py3-none-any.whl (608 kB)
+
+Using cached werkzeug-3.1.8-py3-none-any.whl (226 kB)
+
+Using cached psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (155 kB)
+
+Using cached rsa-4.9.1-py3-none-any.whl (34 kB)
+
+Using cached ruamel_yaml-0.19.1-py3-none-any.whl (118 kB)
+
+Using cached PySocks-1.7.1-py3-none-any.whl (16 kB)
+
+Using cached async_timeout-4.0.3-py3-none-any.whl (5.7 kB)
+
+Using cached Babel-2.9.1-py2.py3-none-any.whl (8.8 MB)
+
+Downloading caio-0.9.25-cp312-cp312-manylinux_2_34_x86_64.whl (80 kB)
+
+Downloading charset_normalizer-3.4.7-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (216 kB)
+
+Using cached gitdb-4.0.12-py3-none-any.whl (62 kB)
+
+Using cached idna-3.18-py3-none-any.whl (65 kB)
+
+Downloading multidict-6.7.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (256 kB)
+
+Using cached smmap-5.0.3-py3-none-any.whl (24 kB)
+
+Using cached urllib3-2.7.0-py3-none-any.whl (131 kB)
+
+Downloading yarl-1.24.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (105 kB)
+
+Using cached Hikka_TL_New-2.0.8-py3-none-any.whl (646 kB)
+
+Using cached Hikka_Pyro_New-2.0.103-py3-none-any.whl (3.6 MB)
+
+Using cached aiosignal-1.4.0-py3-none-any.whl (7.5 kB)
+
+Using cached attrs-26.1.0-py3-none-any.whl (67 kB)
+
+Using cached certifi-2026.6.17-py3-none-any.whl (133 kB)
+
+Downloading frozenlist-1.8.0-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (242 kB)
+
+Using cached magic_filter-1.0.12-py3-none-any.whl (11 kB)
+
+Downloading markupsafe-3.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+
+Downloading propcache-0.5.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (61 kB)
+
+Using cached pyasn1-0.6.3-py3-none-any.whl (83 kB)
+
+Using cached pytz-2026.2-py2.py3-none-any.whl (510 kB)
+
+Using cached typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+
+Building wheels for collected packages: aiohttp, grapheme, tgcrypto, pyaes
+
+  Building wheel for aiohttp (pyproject.toml) ... error
+
+  error: subprocess-exited-with-error
+
+  
+
+  × Building wheel for aiohttp (pyproject.toml) did not run successfully.
+
+  │ exit code: 1
+
+  ╰─> [111 lines of output]
+
+      *********************
+
+      * Accelerated build *
+
+      *********************
+
+      /tmp/pip-build-env-2mff5724/overlay/lib/python3.12/site-packages/setuptools/dist.py:765: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+
+      !!
+
+      
+
+              ********************************************************************************
+
+              Please consider removing the following classifiers in favor of a SPDX license expression:
+
+      
+
+              License :: OSI Approved :: Apache Software License
+
+      
+
+              See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+
+              ********************************************************************************
+
+      
+
+      !!
+
+        self._finalize_license_expression()
+
+      running bdist_wheel
+
+      running build
+
+      running build_py
+
+      creating build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/worker.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/web_ws.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/web_urldispatcher.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/web_server.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/web_runner.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/web_routedef.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/web_response.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/web_request.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/web_protocol.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/web_middlewares.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/web_log.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/web_fileresponse.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/web_exceptions.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/web_app.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/web.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/typedefs.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/tracing.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/test_utils.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/tcp_helpers.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/streams.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/resolver.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/pytest_plugin.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/payload_streamer.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/payload.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/multipart.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/log.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/locks.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/http_writer.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/http_websocket.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/http_parser.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/http_exceptions.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/http.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/helpers.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/hdrs.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/formdata.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/cookiejar.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/connector.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/client_ws.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/client_reqrep.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/client_proto.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/client_exceptions.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/client.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/base_protocol.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/abc.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/__init__.py -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      running egg_info
+
+      writing aiohttp.egg-info/PKG-INFO
+
+      writing dependency_links to aiohttp.egg-info/dependency_links.txt
+
+      writing requirements to aiohttp.egg-info/requires.txt
+
+      writing top-level names to aiohttp.egg-info/top_level.txt
+
+      reading manifest file 'aiohttp.egg-info/SOURCES.txt'
+
+      reading manifest template 'MANIFEST.in'
+
+      warning: no files found matching 'aiohttp' anywhere in distribution
+
+      warning: no previously-included files matching '*.pyc' found anywhere in distribution
+
+      warning: no previously-included files matching '*.pyd' found anywhere in distribution
+
+      warning: no previously-included files matching '*.so' found anywhere in distribution
+
+      warning: no previously-included files matching '*.lib' found anywhere in distribution
+
+      warning: no previously-included files matching '*.dll' found anywhere in distribution
+
+      warning: no previously-included files matching '*.a' found anywhere in distribution
+
+      warning: no previously-included files matching '*.obj' found anywhere in distribution
+
+      warning: no previously-included files found matching 'aiohttp/*.html'
+
+      no previously-included directories found matching 'docs/_build'
+
+      adding license file 'LICENSE.txt'
+
+      writing manifest file 'aiohttp.egg-info/SOURCES.txt'
+
+      copying aiohttp/_cparser.pxd -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/_find_header.pxd -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/_headers.pxi -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/_helpers.pyi -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/_helpers.pyx -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/_http_parser.pyx -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/_http_writer.pyx -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/_websocket.pyx -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      copying aiohttp/py.typed -> build/lib.linux-x86_64-cpython-312/aiohttp
+
+      creating build/lib.linux-x86_64-cpython-312/aiohttp/.hash
+
+      copying aiohttp/.hash/_cparser.pxd.hash -> build/lib.linux-x86_64-cpython-312/aiohttp/.hash
+
+      copying aiohttp/.hash/_find_header.pxd.hash -> build/lib.linux-x86_64-cpython-312/aiohttp/.hash
+
+      copying aiohttp/.hash/_helpers.pyi.hash -> build/lib.linux-x86_64-cpython-312/aiohttp/.hash
+
+      copying aiohttp/.hash/_helpers.pyx.hash -> build/lib.linux-x86_64-cpython-312/aiohttp/.hash
+
+      copying aiohttp/.hash/_http_parser.pyx.hash -> build/lib.linux-x86_64-cpython-312/aiohttp/.hash
+
+      copying aiohttp/.hash/_http_writer.pyx.hash -> build/lib.linux-x86_64-cpython-312/aiohttp/.hash
+
+      copying aiohttp/.hash/_websocket.pyx.hash -> build/lib.linux-x86_64-cpython-312/aiohttp/.hash
+
+      copying aiohttp/.hash/hdrs.py.hash -> build/lib.linux-x86_64-cpython-312/aiohttp/.hash
+
+      running build_ext
+
+      building 'aiohttp._websocket' extension
+
+      creating build/temp.linux-x86_64-cpython-312/aiohttp
+
+      gcc -fno-strict-overflow -Wsign-compare -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DNDEBUG -fexceptions -fcf-protection -fexceptions -fcf-protection -fexceptions -fcf-protection -fPIC -I/home/stani/hikka/hdr0/.venv/include -I/usr/include/python3.12 -c aiohttp/_websocket.c -o build/temp.linux-x86_64-cpython-312/aiohttp/_websocket.o
+
+      aiohttp/_websocket.c:6:10: fatal error: Python.h: Немає такого файла або каталогу
+
+          6 | #include "Python.h"
+
+            |          ^~~~~~~~~~
+
+      compilation terminated.
+
+      error: command '/usr/bin/gcc' failed with exit code 1
+
+      [end of output]
+
+  
+
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+
+  ERROR: Failed building wheel for aiohttp
+
+  Building wheel for grapheme (pyproject.toml) ... done
+
+  Created wheel for grapheme: filename=grapheme-0.6.0-py3-none-any.whl size=209782 sha256=26e64e3248f0dc71ff07bcadd8be036e39275e35fe66fe35513bd1fbc38923cb
+
+  Stored in directory: /home/stani/.cache/pip/wheels/5b/aa/3b/d94434910f5e19ac7f8aa6523d74a46fe06bfcbc7e4b26caf6
+
+  Building wheel for tgcrypto (pyproject.toml) ... error
+
+  error: subprocess-exited-with-error
+
+  
+
+  × Building wheel for tgcrypto (pyproject.toml) did not run successfully.
+
+  │ exit code: 1
+
+  ╰─> [42 lines of output]
+
+      /tmp/pip-build-env-u4vq0gdr/overlay/lib/python3.12/site-packages/setuptools/_distutils/dist.py:287: UserWarning: Unknown distribution option: 'test_suite'
+
+        warnings.warn(msg)
+
+      /tmp/pip-build-env-u4vq0gdr/overlay/lib/python3.12/site-packages/setuptools/dist.py:765: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+
+      !!
+
+      
+
+              ********************************************************************************
+
+              Please consider removing the following classifiers in favor of a SPDX license expression:
+
+      
+
+              License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)
+
+      
+
+              See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+
+              ********************************************************************************
+
+      
+
+      !!
+
+        self._finalize_license_expression()
+
+      running bdist_wheel
+
+      running build
+
+      running build_py
+
+      creating build/lib.linux-x86_64-cpython-312/tests
+
+      copying tests/__init__.py -> build/lib.linux-x86_64-cpython-312/tests
+
+      creating build/lib.linux-x86_64-cpython-312/tests/ige
+
+      copying tests/ige/test_ige.py -> build/lib.linux-x86_64-cpython-312/tests/ige
+
+      copying tests/ige/__init__.py -> build/lib.linux-x86_64-cpython-312/tests/ige
+
+      creating build/lib.linux-x86_64-cpython-312/tests/ctr
+
+      copying tests/ctr/test_ctr.py -> build/lib.linux-x86_64-cpython-312/tests/ctr
+
+      copying tests/ctr/__init__.py -> build/lib.linux-x86_64-cpython-312/tests/ctr
+
+      creating build/lib.linux-x86_64-cpython-312/tests/cbc
+
+      copying tests/cbc/test_cbc.py -> build/lib.linux-x86_64-cpython-312/tests/cbc
+
+      copying tests/cbc/__init__.py -> build/lib.linux-x86_64-cpython-312/tests/cbc
+
+      running build_ext
+
+      building 'tgcrypto' extension
+
+      creating build/temp.linux-x86_64-cpython-312/tgcrypto
+
+      gcc -fno-strict-overflow -Wsign-compare -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DNDEBUG -fexceptions -fcf-protection -fexceptions -fcf-protection -fexceptions -fcf-protection -fPIC -I/home/stani/hikka/hdr0/.venv/include -I/usr/include/python3.12 -c tgcrypto/aes256.c -o build/temp.linux-x86_64-cpython-312/tgcrypto/aes256.o
+
+      gcc -fno-strict-overflow -Wsign-compare -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DNDEBUG -fexceptions -fcf-protection -fexceptions -fcf-protection -fexceptions -fcf-protection -fPIC -I/home/stani/hikka/hdr0/.venv/include -I/usr/include/python3.12 -c tgcrypto/cbc256.c -o build/temp.linux-x86_64-cpython-312/tgcrypto/cbc256.o
+
+      gcc -fno-strict-overflow -Wsign-compare -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DNDEBUG -fexceptions -fcf-protection -fexceptions -fcf-protection -fexceptions -fcf-protection -fPIC -I/home/stani/hikka/hdr0/.venv/include -I/usr/include/python3.12 -c tgcrypto/ctr256.c -o build/temp.linux-x86_64-cpython-312/tgcrypto/ctr256.o
+
+      gcc -fno-strict-overflow -Wsign-compare -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DNDEBUG -fexceptions -fcf-protection -fexceptions -fcf-protection -fexceptions -fcf-protection -fPIC -I/home/stani/hikka/hdr0/.venv/include -I/usr/include/python3.12 -c tgcrypto/ige256.c -o build/temp.linux-x86_64-cpython-312/tgcrypto/ige256.o
+
+      gcc -fno-strict-overflow -Wsign-compare -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DNDEBUG -fexceptions -fcf-protection -fexceptions -fcf-protection -fexceptions -fcf-protection -fPIC -I/home/stani/hikka/hdr0/.venv/include -I/usr/include/python3.12 -c tgcrypto/tgcrypto.c -o build/temp.linux-x86_64-cpython-312/tgcrypto/tgcrypto.o
+
+      tgcrypto/tgcrypto.c:23:10: fatal error: Python.h: Немає такого файла або каталогу
+
+         23 | #include <Python.h>
+
+            |          ^~~~~~~~~~
+
+      compilation terminated.
+
+      error: command '/usr/bin/gcc' failed with exit code 1
+
+      [end of output]
+
+  
+
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+
+  ERROR: Failed building wheel for tgcrypto
+
+  Building wheel for pyaes (pyproject.toml) ... done
+
+  Created wheel for pyaes: filename=pyaes-1.6.1-py3-none-any.whl size=26742 sha256=ba63064e3ab0139dd70d9f9c71202c72d4707f80adb6425e01ac82a33194a366
+
+  Stored in directory: /home/stani/.cache/pip/wheels/d9/43/32/ec313dd557e88e419489b9df40c04dad7b99576bde162496f8
+
+Successfully built grapheme pyaes
+
+Failed to build aiohttp tgcrypto
+
+error: failed-wheel-build-for-install
+
+
+
+× Failed to build installable wheels for some pyproject.toml based projects
+
+╰─> aiohttp, tgcrypto
+
+    ~/hikka/hdr0    main ▓▒░────────────────────────────────────────────────────────────────────────────────────────────────────────────────────░▒▓ 15s   hdr0  
+
+❯ 

@@ -4,7 +4,7 @@
 
 <img src="https://img.shields.io/badge/status-unofficial%20fork-orange">
 <img src="https://img.shields.io/badge/build-custom-blue">
-<img src="https://img.shields.io/badge/python-3.8+-blue">
+<img src="https://img.shields.io/badge/python-3.11-blue">
 
 <br>
 
@@ -104,8 +104,12 @@ You are responsible for all actions taken by your account.
 ### Manual installation
 
 ```bash
-apt update && apt install git libcairo2 -y
+apt update && apt install git python3.11 python3.11-dev python3.11-venv python3-pip build-essential libcairo2 -y
 git clone https://github.com/Splaueef/hikka
-cd Hikka
+cd hikka
+python3.11 -m venv .venv
+source .venv/bin/activate
+pip install --upgrade pip setuptools wheel
 pip install -r requirements.txt
-python3 -m hikka
+python -m hikka
+```

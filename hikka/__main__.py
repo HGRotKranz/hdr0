@@ -12,12 +12,14 @@ import os
 import re
 import subprocess
 import sys
+import sysconfig
 
 REQUIREMENTS_PATH = os.path.abspath(
     os.path.join(os.path.dirname(__file__), "..", "requirements.txt")
 )
 
 MIN_PYTHON_VERSION = (3, 11, 0)
+MAX_PYTHON_VERSION = (3, 12, 0)
 
 CONFLICTING_PACKAGES = (
     "telethon",
@@ -75,7 +77,31 @@ def _assert_core_packages():
             )
 
 
+def _format_version(version: tuple) -> str:
+    return ".".join(map(str, version))
+
+
+def _python_headers_available() -> bool:
+    """Return True when Python development headers are available for builds."""
+    include_dir = sysconfig.get_path("include")
+    return bool(include_dir and os.path.exists(os.path.join(include_dir, "Python.h")))
+
+
+def _print_python_headers_hint():
+    print(
+        "🚫 Python development headers were not found. "
+        "Some dependencies need them when wheels are unavailable for your Python."
+    )
+    print("Install the headers for your exact Python version, then retry.")
+    print("Debian/Ubuntu: sudo apt install python3-dev build-essential")
+    print("Fedora: sudo dnf install python3-devel gcc")
+    print("Arch: sudo pacman -S python base-devel")
+
+
 def deps():
+    if not _python_headers_available():
+        _print_python_headers_hint()
+
     subprocess.run(
         [
             sys.executable,
@@ -113,8 +139,16 @@ def restart():
 if sys.version_info < MIN_PYTHON_VERSION:
     print(
         "🚫 Error: you must use at least Python version "
-        f"{'.'.join(map(str, MIN_PYTHON_VERSION))}"
+        f"{_format_version(MIN_PYTHON_VERSION)}"
     )
+    sys.exit(1)
+elif sys.version_info >= MAX_PYTHON_VERSION:
+    print(
+        "🚫 Error: this Hikka build supports Python "
+        f">={_format_version(MIN_PYTHON_VERSION)}, <{_format_version(MAX_PYTHON_VERSION)}. "
+        "Please use Python 3.11."
+    )
+    sys.exit(1)
 elif __package__ != "hikka":  # In case they did python __main__.py
     print("🚫 Error: you cannot run this as a script; you must execute as a package")
 else:

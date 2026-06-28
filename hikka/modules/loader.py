@@ -637,7 +637,8 @@ class LoaderMod(loader.Module):
                                     "sklearn": "scikit-learn",
                                     "pil": "Pillow",
                                     "hikkatl": "Hikka-TL",
-                                    "pyrogram": "Hikka-Pyro",
+                                    "pyrogram": "pyrogram",
+                                    "hikkapyro": "hikka-pyro-new",
                                 }.get(e.name.lower(), e.name)
                             ]
 

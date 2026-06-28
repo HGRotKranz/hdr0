@@ -7,13 +7,34 @@
 # 🔑 https://www.gnu.org/licenses/agpl-3.0.html
 
 import getpass
+import importlib
 import os
+import re
 import subprocess
 import sys
 
 REQUIREMENTS_PATH = os.path.abspath(
     os.path.join(os.path.dirname(__file__), "..", "requirements.txt")
 )
+
+MIN_PYTHON_VERSION = (3, 11, 0)
+
+CONFLICTING_PACKAGES = (
+    "telethon",
+    "telethon-mod",
+    "hikka-tl",
+    "hikka-tl-new",
+    "hikka-pyro",
+    "hikka-pyro-new",
+)
+
+REQUIRED_CORE_PACKAGES = (
+    ("hikkatl", "2.0.8", "Hikka-TL"),
+    ("hikkapyro", "2.0.103", "Hikka-Pyro"),
+    ("aiogram", "2.25.2", "aiogram"),
+    ("pyrogram", "2.0.106", "Pyrogram"),
+)
+
 
 if (
     getpass.getuser() == "root"
@@ -31,6 +52,29 @@ if (
         sys.exit(1)
 
 
+def _version_tuple(version: str) -> tuple:
+    """Convert package version string to a comparable integer tuple."""
+    return tuple(int(part) for part in re.findall(r"\d+", version.split("+", 1)[0]))
+
+
+def _is_outdated(installed: str, required: str) -> bool:
+    """Return True when installed version is older than the required version."""
+    return _version_tuple(installed) < _version_tuple(required)
+
+
+def _assert_core_packages():
+    """Ensure core Hikka runtime packages match the supported API versions."""
+    for module_name, required_version, display_name in REQUIRED_CORE_PACKAGES:
+        module = importlib.import_module(module_name)
+        installed_version = getattr(module, "__version__", "0")
+
+        if _is_outdated(installed_version, required_version):
+            raise ImportError(
+                f"{display_name} {installed_version} is installed, "
+                f"but Hikka requires at least {required_version}"
+            )
+
+
 def deps():
     subprocess.run(
         [
@@ -39,13 +83,7 @@ def deps():
             "pip",
             "uninstall",
             "-y",
-            "telethon",
-            "telethon-mod",
-            "hikka-tl",
-            "hikka-tl-new",
-            "pyrogram",
-            "hikka-pyro",
-            "hikka-pyro-new",
+            *CONFLICTING_PACKAGES,
         ],
         check=False,
     )
@@ -72,30 +110,20 @@ def restart():
     _restart()
 
 
-if sys.version_info < (3, 8, 0):
-    print("🚫 Error: you must use at least Python version 3.8.0")
+if sys.version_info < MIN_PYTHON_VERSION:
+    print(
+        "🚫 Error: you must use at least Python version "
+        f"{'.'.join(map(str, MIN_PYTHON_VERSION))}"
+    )
 elif __package__ != "hikka":  # In case they did python __main__.py
     print("🚫 Error: you cannot run this as a script; you must execute as a package")
 else:
     try:
-        import hikkatl
+        _assert_core_packages()
     except Exception:
-        pass
-    else:
-        try:
-            import hikkatl  # noqa: F811
-
-            if tuple(map(int, hikkatl.__version__.split("."))) < (2, 0, 4):
-                raise ImportError
-
-            import hikkapyro
-
-            if tuple(map(int, hikkapyro.__version__.split("."))) < (2, 0, 103):
-                raise ImportError
-        except ImportError:
-            print("🔄 Installing dependencies...")
-            deps()
-            restart()
+        print("🔄 Installing dependencies...")
+        deps()
+        restart()
 
     try:
         from . import log

@@ -4,12 +4,12 @@
 # You can redistribute it and/or modify it under the terms of the GNU AGPLv3
 # 🔑 https://www.gnu.org/licenses/agpl-3.0.html
 
-import hikkapyro
 import hikkatl
 from hikkatl.extensions.html import CUSTOM_EMOJIS
 from hikkatl.tl.types import Message
 
 from .. import loader, main, utils, version
+from ..compat import pyrogram as pyro_backend
 from ..compat.dragon import DRAGON_EMOJI
 from ..inline.types import InlineCall
 
@@ -64,7 +64,7 @@ class CoreMod(loader.Module):
                     if self._client.pyro_proxy
                     else "<emoji document_id=5418308381586759720>📴</emoji>"
                 ),
-                f"{hikkapyro.__version__} #{hikkapyro.raw.all.layer}",
+                f"{pyro_backend.__version__} #{pyro_backend.raw_layer() or 'unknown'}",
             )
             + (
                 ""

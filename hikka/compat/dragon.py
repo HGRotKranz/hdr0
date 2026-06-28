@@ -27,7 +27,11 @@ except Exception:
 else:
     PIP_AVAILABLE = True
 
-from hikkapyro import Client, errors, types
+from . import pyrogram as pyro_backend
+
+Client = pyro_backend.Client
+errors = pyro_backend.errors
+types = pyro_backend.types
 
 from .. import version
 from .._internal import restart
@@ -392,7 +396,7 @@ def patched_import(name: str, *args, **kwargs):
         return native_import("hikkatl" + name[8:], *args, **kwargs)
 
     if name.startswith("pyrogram"):
-        return native_import("hikkapyro" + name[8:], *args, **kwargs)
+        return native_import(pyro_backend.module_name(name), *args, **kwargs)
 
     return native_import(name, *args, **kwargs)
 

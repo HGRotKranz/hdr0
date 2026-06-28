@@ -41,8 +41,8 @@ def restart():
     if "HIKKA_DO_NOT_RESTART" in os.environ:
         print(
             "Got in a loop, exiting\nYou probably need to manually remove existing"
-            " packages and then restart Hikka. Run `pip uninstall -y telethon"
-            " telethon-mod hikka-tl hikka-tl-new pyrogram hikka-pyro"
+            " packages and then restart Hikka. Run `python -m pip uninstall -y telethon"
+            " telethon-mod hikka-tl hikka-tl-new hikka-pyro"
             " hikka-pyro-new`, then restart Hikka."
         )
         sys.exit(0)
@@ -60,7 +60,7 @@ def restart():
     if "DOCKER" in os.environ:
         atexit.register(get_startup_callback())
     else:
-        # This one is requried for better way of killing to work properly,
+        # This one is required for the better way of killing to work properly,
         # since we kill the process group using unix signals
         signal.signal(signal.SIGTERM, get_startup_callback())
 

@@ -1,6 +1,7 @@
 Pillow
-requests
-emoji
+pyrogram==2.0.106
+requests==2.34.2
+emoji==2.15.0
 moviepy
 python-ffmpeg
 ffmpeg

@@ -13,9 +13,11 @@ import re
 import typing
 
 import hikkatl
-from hikkapyro import Client as PyroClient
-from hikkapyro import errors as pyro_errors
-from hikkapyro import raw
+from . import pyrogram as pyro_backend
+
+PyroClient = pyro_backend.Client
+pyro_errors = pyro_backend.errors
+raw = pyro_backend.raw
 
 from .. import utils
 from ..tl_cache import CustomTelegramClient
@@ -250,12 +252,12 @@ class PyroProxyClient(PyroClient):
         self,
         *args,
         **kwargs,
-    ) -> "typing.Union[hikkapyro.raw.types.PeerChat, hikkapyro.raw.types.PeerChannel, hikkapyro.raw.types.PeerUser]":  # type: ignore  # noqa: E501, F821
+    ) -> "typing.Union[raw.types.PeerChat, raw.types.PeerChannel, raw.types.PeerUser]":
         """
         Resolve a peer (user, chat or channel) from the given input.
         :param args: Arguments to pass to the Telethon client's
         :return: The resolved peer
-        :rtype: typing.Union[hikkapyro.raw.types.PeerChat, hikkapyro.raw.types.PeerChannel, hikkapyro.raw.types.PeerUser]
+        :rtype: typing.Union[raw.types.PeerChat, raw.types.PeerChannel, raw.types.PeerUser]
         """
         return self._tl2pyro(await self.tl_client.get_entity(*args, **kwargs))
 
